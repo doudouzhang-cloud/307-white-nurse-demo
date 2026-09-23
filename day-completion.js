@@ -1,6 +1,6 @@
 /* Completion depends on all required work, not on the currently selected mode. */
 (() => {
-  function bloodComplete(s){return Boolean(s.uploaded||s.selfFields?.bloodUploaded==='on')}
+  function bloodComplete(s){return Boolean(s.uploaded||s.selfFields?.bloodUploaded==='on'||window.Outpatient307?.hasTodayBloodReport?.())}
   function requirements(day,s){
     const selfRecord=s.selfDone&&!s.voiceDone;
     return {

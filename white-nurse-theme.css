@@ -74,3 +74,40 @@ img[src*="assets/medical-illustrations/"]:not([src*="team-warm-cartoon"]){filter
 #wn-calendar-content[hidden]{display:none}
 .wn-calendar-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:14px 0 10px;padding-top:13px;border-top:1px solid #f0e5df}
 .wn-calendar-toolbar>small{font-size:11px;color:#8b7b6d}
+
+/* Light colorful quick entries, with neutral readable labels. */
+.demo-nav .nav-portal-cards .nav-portal[data-nav="workbench"]{--tint:#eee7fb;--edge:#cfbfeb;--icon:#e0d1f5;--accent:#8061ab}
+.demo-nav .nav-portal-cards .nav-portal[data-nav="special"]{--tint:#ffe9dc;--edge:#f1c7ad;--icon:#ffdac1;--accent:#b7754c}
+.demo-nav .nav-portal-cards .nav-portal[data-nav="home"]{--tint:#fce4eb;--edge:#ecc1cf;--icon:#f8d0de;--accent:#ad6a82}
+.demo-nav .nav-portal-cards .nav-portal[data-nav="care"]{--tint:#fff2cc;--edge:#ecd699;--icon:#ffe8a6;--accent:#a38945}
+.demo-nav .nav-portal-cards .nav-portal{background:linear-gradient(105deg,var(--tint) 0%,var(--tint) 35%,#fffdfa 100%);border-color:var(--edge);color:#39332f;box-shadow:0 3px 9px rgba(79,57,41,.035)}
+.demo-nav .nav-portal-cards .nav-portal>em{background:var(--icon);color:var(--accent)}
+.demo-nav .nav-portal-cards .nav-portal small{color:#7d706b}
+.demo-nav .nav-portal-cards .nav-portal>i{color:var(--accent)}
+.demo-nav .nav-portal-cards .nav-portal:hover{border-color:var(--accent)}
+.demo-nav .nav-portal-cards .nav-portal.is-active{background:var(--tint);border-color:var(--accent);box-shadow:inset 3px 0 var(--accent),0 3px 9px rgba(79,57,41,.035)}
+.demo-nav .nav-portal-cards .nav-portal:focus-visible{outline-color:var(--accent)}
+
+#demoResetDialog{width:min(360px,calc(100% - 40px));padding:24px;border:1px solid #eadbd0;border-radius:20px;background:#fffaf6;color:#39332f;box-shadow:0 18px 60px #392f2a25}
+#demoResetDialog::backdrop{background:rgba(42,34,29,.32)}
+#demoResetDialog h2{margin:0 0 12px;font-size:20px}#demoResetDialog p{font-size:14px;line-height:1.8;color:#77675c}
+#demoResetDialog .reset-actions{display:flex;gap:12px;margin-top:22px}#demoResetDialog button{flex:1;padding:12px;border:1px solid #dfcdbf;border-radius:12px;background:#fff;color:#695346;font:inherit;cursor:pointer}#demoResetDialog [data-reset-confirm]{background:#a86546;border-color:#a86546;color:white}
+
+/* Four compact service cards with soft illustration accents. */
+.wn-services{padding:18px 15px;background:#fffdfb;border-color:#eee3dc;box-shadow:0 4px 16px #63452b05}
+.wn-services h2{font-size:16px;margin-bottom:15px;letter-spacing:.3px}
+.wn-services>div{gap:10px}
+.wn-services button{min-height:128px;padding:13px 12px 12px;border-color:#ece1d9;background:linear-gradient(145deg,#fffaf5,#fff);border-radius:16px;transition:background .15s,box-shadow .15s}
+.wn-services button img{display:block;width:42px;height:42px;object-fit:contain;margin-bottom:10px}
+.wn-services button b{font-size:13px;color:#40352f;line-height:1.5}
+.wn-services button small{font-size:10px;margin-top:4px;color:#8a776a}
+.wn-services button span{top:22px;right:13px;color:#b89a87}
+.wn-services button[data-wn="scales"]{background:linear-gradient(145deg,#f3f0fa,#fff)}
+.wn-services button[data-wn="care"]{background:linear-gradient(145deg,#edf5f0,#fff)}
+.wn-services button[data-wn="alerts"]{background:linear-gradient(145deg,#fff0e9,#fff)}
+.wn-services button:hover{box-shadow:0 4px 12px #63452b0c}
+.wn-services button:focus-visible{outline:2px solid #bc8f73;outline-offset:2px}
+.op-contact-state{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;margin:14px 0 10px;border:1px solid #dce7dd;border-radius:12px;background:#f0f6f0;color:#55725a;font-size:13px;font-weight:600;line-height:1.6}
+
+#home .home-care-pending{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:12px;padding:14px 13px;border:1px solid #d9ccec;border-radius:14px;background:linear-gradient(110deg,#eee6f8,#f7f2fc);text-align:left;color:#725298}
+#home .home-care-pending b{display:block;font-size:14px}#home .home-care-pending small{display:block;margin-top:5px;font-size:11px;line-height:1.6;color:#80718f}#home .home-care-pending i{font-style:normal;font-size:22px}

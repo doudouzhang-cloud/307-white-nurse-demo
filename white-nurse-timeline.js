@@ -36,10 +36,12 @@ function render(){
  const shown=due.slice(-5),done=due.filter(task=>task.done).length;
  host.innerHTML=`<div class="wn-care-hero"><img src="assets/medical-illustrations/team-warm-cartoon.png" alt="白护士长与307医院医生团队卡通形象"><div><span>307医院白护士长团队 · 专属陪伴</span><h2>化疗期间，照护继续</h2><p>复查、身体感受和导管护理<br>按日程一步步完成</p></div></div>
  ${calendar(data,tasks,day,done,pending.length)}
+ ${data.tasks.some(t=>t.doctorOrdered&&!t.done)?`<section class="wn-doctor-orders"><h2>医护团队安排的复查</h2>${data.tasks.filter(t=>t.doctorOrdered&&!t.done).map(t=>`<button data-wn-review="${t.id}"><b>${esc(t.label)}</b><span>${dateLabel(t.date)} · ${t.date>data.now?'已安排':'待提交报告'} ›</span><small>${esc(t.message)}</small></button>`).join('')}</section>`:''}
  <section class="wn-today"><header><div><h2>当前待办</h2><span>${shown.length} 项</span></div><strong>${done}/${due.length}</strong></header>
  ${shown.length?shown.map(task=>taskRow(task,data)).join(''):'<p class="wn-empty">目前没有待完成事项。上方日历可查看后续安排。</p>'}
  <p class="wn-next">${due.length>shown.length?`另有 ${due.length-shown.length} 项较早任务，可在日历中查看。`:next.length?`后续安排：${dateLabel(next[0].date)} · ${esc(next[0].label)}`:'后续安排请查看上方日历。'}</p></section>
- <section class="wn-services"><h2>照护服务与记录</h2><div><button type="button" data-wn="reports"><b>检查报告</b><small>上传与查看预审</small><span>›</span></button><button type="button" data-wn="scales"><b>健康评估</b><small>查看量表任务</small><span>›</span></button><button type="button" data-wn="care"><b>导管护理</b><small>维护与宣教</small><span>›</span></button><button type="button" data-wn="alerts"><b>健康提醒</b><small>${data.alerts.length} 条待关注</small><span>›</span></button></div></section>`;
+ <section class="wn-services"><h2>照护服务与记录</h2><div><button type="button" data-wn="reports"><img src="assets/medical-illustrations/lab.png" alt="" aria-hidden="true"><b>检查报告</b><small>上传与查看预审</small><span>›</span></button><button type="button" data-wn="scales"><img src="assets/medical-illustrations/scale.png" alt="" aria-hidden="true"><b>健康评估</b><small>查看量表任务</small><span>›</span></button><button type="button" data-wn="care"><img src="assets/medical-illustrations/care.png" alt="" aria-hidden="true"><b>导管护理</b><small>维护与宣教</small><span>›</span></button><button type="button" data-wn="alerts"><img src="assets/medical-illustrations/calendar.png" alt="" aria-hidden="true"><b>健康提醒</b><small>${data.alerts.length} 条待关注</small><span>›</span></button></div></section>`;
+ host.querySelectorAll('[data-wn-review]').forEach(b=>b.onclick=()=>{const t=data.tasks.find(t=>t.id===b.dataset.wnReview);if(t.date>data.now)openDate(t.date);else OP.openTaskFromTimeline(t.id)});
  host.querySelector('.wn-calendar-toggle').onclick=event=>{calendarExpanded=!calendarExpanded;const button=event.currentTarget;button.setAttribute('aria-expanded',String(calendarExpanded));button.innerHTML=(calendarExpanded?'收起日历':'展开日历')+'<i aria-hidden="true"></i>';host.querySelector('#wn-calendar-content').hidden=!calendarExpanded};
  host.querySelectorAll('[data-wn-month]').forEach(button=>button.onclick=()=>{visibleMonth=changeMonth(visibleMonth,Number(button.dataset.wnMonth));selectedDate=`${visibleMonth}-01`;render()});
  host.querySelectorAll('[data-wn-date]').forEach(button=>button.onclick=()=>{selectedDate=button.dataset.wnDate;render()});
@@ -49,7 +51,9 @@ function render(){
  host.querySelectorAll('.wn-services [data-wn]').forEach(button=>button.onclick=()=>button.dataset.wn==='alerts'?OP.openAlertsFromTimeline():OP.openFromTimeline(button.dataset.wn));
 }
 function openCalendar(){calendarExpanded=true;window.Project307.navigate('special');visibleMonth='';selectedDate='';render();const pane=document.getElementById('special');const y=host.getBoundingClientRect().top-pane.getBoundingClientRect().top+pane.scrollTop-12;pane.scrollTo({top:Math.max(0,y),behavior:'auto'})}
-window.WhiteNurseTimeline={render,open:openCalendar,openCalendar};
+function returnToTasks(){calendarExpanded=false;window.Project307.navigate('special');render();const pane=document.getElementById('special');const y=host.getBoundingClientRect().top-pane.getBoundingClientRect().top+pane.scrollTop-12;pane.scrollTo({top:Math.max(0,y),behavior:'auto'})}
+function openDate(date){calendarExpanded=true;selectedDate=date;visibleMonth=date.slice(0,7);window.Project307.navigate('special');render();host.scrollIntoView({block:'start'})}
+window.WhiteNurseTimeline={openDate,render,open:openCalendar,openCalendar,returnToTasks,reset(){selectedDate='';visibleMonth='';calendarExpanded=false;render()}};
 window.addEventListener('outpatient307-change',()=>{if(document.getElementById('special')?.classList.contains('active'))render()});
 render();
 })();
