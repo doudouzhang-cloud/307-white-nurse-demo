@@ -108,6 +108,3 @@ img[src*="assets/medical-illustrations/"]:not([src*="team-warm-cartoon"]){filter
 .wn-services button:hover{box-shadow:0 4px 12px #63452b0c}
 .wn-services button:focus-visible{outline:2px solid #bc8f73;outline-offset:2px}
 .op-contact-state{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 10px;margin:14px 0 10px;border:1px solid #dce7dd;border-radius:12px;background:#f0f6f0;color:#55725a;font-size:13px;font-weight:600;line-height:1.6}
-
-#home .home-care-pending{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-top:12px;padding:14px 13px;border:1px solid #d9ccec;border-radius:14px;background:linear-gradient(110deg,#eee6f8,#f7f2fc);text-align:left;color:#725298}
-#home .home-care-pending b{display:block;font-size:14px}#home .home-care-pending small{display:block;margin-top:5px;font-size:11px;line-height:1.6;color:#80718f}#home .home-care-pending i{font-style:normal;font-size:22px}
