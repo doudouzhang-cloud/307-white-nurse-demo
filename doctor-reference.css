@@ -1,158 +1,158 @@
 /* Shared inner-page colors; clinical status colors retain their meaning. */
-#workbench{--line:#e1e8f2;--muted:#718198;--surface:#fff}
-#workbench .wbv2{color:#293e58}
-#workbench .wbv2-handle{background:#3478d1}
+#workbench{--line:#efe8e4;--muted:#917161;--surface:#fff}
+#workbench .wbv2{color:#513b30}
+#workbench .wbv2-handle{background:#ac6642}
 #workbench .wbv2-kpi{background:#ffffff}
-#workbench .wbv2-kpi.selected{border:3px solid #3478d1}
-#workbench .wbv2-kpi span,#workbench .wbv2-quick i,#workbench .wbv2-research-kpi i{background:#f0f5fc;color:#3478d1}
-#workbench .wbv2-kpi small{color:#718198}
+#workbench .wbv2-kpi.selected{border:3px solid #ac6642}
+#workbench .wbv2-kpi span,#workbench .wbv2-quick i,#workbench .wbv2-research-kpi i{background:#faf5f2;color:#ac6642}
+#workbench .wbv2-kpi small{color:#917161}
 #workbench .wbv2-quick button{background:#ffffff}
-#workbench .wbv2-quick small{color:#718198}
-#workbench .wbv2-foot{color:#718198}
-#workbench .wbv2-head small{color:#718198}
-#workbench .wbv2-back,#workbench .wbv2-patient{color:#293e58}
-#workbench .wbv2-patient{color:#3478d1}
+#workbench .wbv2-quick small{color:#917161}
+#workbench .wbv2-foot{color:#917161}
+#workbench .wbv2-head small{color:#917161}
+#workbench .wbv2-back,#workbench .wbv2-patient{color:#513b30}
+#workbench .wbv2-patient{color:#ac6642}
 #workbench .wbv2-panel{background:#ffffff}
-#workbench .wbv2-panel-head span{color:#718198}
-#workbench .wbv2-initial{background:#f0f5fc;color:#293e58}
-#workbench .wbv2-patient-row small{color:#718198}
-#workbench .wbv2-outline{border:1px solid #3478d1;background:#ffffff;color:#3478d1}
-#workbench .wbv2-safe{background:#f0f5fc;color:#718198}
-#workbench .wbv2-num{background:#f0f5fc;color:#3478d1}
-#workbench .wbv2-quality small{color:#718198}
-#workbench .wbv2-quality p{color:#718198}
-#workbench .wbv2-quality .wbv2-key{color:#718198}
-#workbench .wbv2-wide{background:#3478d1;color:#ffffff}
-#workbench .wbv2-search{color:#3478d1}
-#workbench .wbv2-search input{color:#293e58}
-#workbench .wbv2-pills button{background:#ffffff;color:#718198}
-#workbench .wbv2-pills button.active{border-color:#3478d1;background:#3478d1;color:#ffffff}
-#workbench .wbv2-select-line span{color:#718198}
-#workbench .wbv2-node-form{border:1px solid #dce6f4;background:#ffffff}
-#workbench .wbv2-node-form select{background:#ffffff;color:#718198}
+#workbench .wbv2-panel-head span{color:#917161}
+#workbench .wbv2-initial{background:#faf5f2;color:#513b30}
+#workbench .wbv2-patient-row small{color:#917161}
+#workbench .wbv2-outline{border:1px solid #ac6642;background:#ffffff;color:#ac6642}
+#workbench .wbv2-safe{background:#faf5f2;color:#917161}
+#workbench .wbv2-num{background:#faf5f2;color:#ac6642}
+#workbench .wbv2-quality small{color:#917161}
+#workbench .wbv2-quality p{color:#917161}
+#workbench .wbv2-quality .wbv2-key{color:#917161}
+#workbench .wbv2-wide{background:#ac6642;color:#ffffff}
+#workbench .wbv2-search{color:#ac6642}
+#workbench .wbv2-search input{color:#513b30}
+#workbench .wbv2-pills button{background:#ffffff;color:#917161}
+#workbench .wbv2-pills button.active{border-color:#ac6642;background:#ac6642;color:#ffffff}
+#workbench .wbv2-select-line span{color:#917161}
+#workbench .wbv2-node-form{border:1px solid #f0e5e0;background:#ffffff}
+#workbench .wbv2-node-form select{background:#ffffff;color:#917161}
 #workbench .wbv2-research-kpi>div{background:#ffffff}
-#workbench .wbv2-research-kpi small{color:#718198}
+#workbench .wbv2-research-kpi small{color:#917161}
 #workbench .wbv2-chart{background:#ffffff}
-#workbench .wbv2-chart>div:first-child{color:#718198}
-#workbench .wbv2-chart strong{color:#3478d1}
-#workbench .wbv2-bars{border-bottom:1px solid #dce6f4;background:repeating-linear-gradient(to bottom,transparent 0,transparent 32px,#dce6f4 33px)}
-#workbench .wbv2-bar i{background:#3478d1}
-#workbench .wbv2-bar small{color:#718198}
-#workbench .wbv2-caption{color:#718198}
-#workbench .wbv2-fields>div:not(.wbv2-panel-head){border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-fields>div>b{background:#f0f5fc;color:#3478d1}
-#workbench .wbv2-logs article{border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-logs time{color:#3478d1}
-#workbench .wbv2-logs span{background:#f0f5fc;color:#3478d1}
-#workbench #wbv2Notice{background:#293e58;color:#ffffff;box-shadow:0 8px 22px #293e5845}
-#workbench .wbv2-switch-patient{border:1px solid #3478d1;background:#ffffff;color:#3478d1}
+#workbench .wbv2-chart>div:first-child{color:#917161}
+#workbench .wbv2-chart strong{color:#ac6642}
+#workbench .wbv2-bars{border-bottom:1px solid #f0e5e0;background:repeating-linear-gradient(to bottom,transparent 0,transparent 32px,#f0e5e0 33px)}
+#workbench .wbv2-bar i{background:#ac6642}
+#workbench .wbv2-bar small{color:#917161}
+#workbench .wbv2-caption{color:#917161}
+#workbench .wbv2-fields>div:not(.wbv2-panel-head){border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-fields>div>b{background:#faf5f2;color:#ac6642}
+#workbench .wbv2-logs article{border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-logs time{color:#ac6642}
+#workbench .wbv2-logs span{background:#faf5f2;color:#ac6642}
+#workbench #wbv2Notice{background:#513b30;color:#ffffff;box-shadow:0 8px 22px #513b3045}
+#workbench .wbv2-switch-patient{border:1px solid #ac6642;background:#ffffff;color:#ac6642}
 #workbench .wbv2-patient-summary{background:#ffffff}
-#workbench .wbv2-patient-summary small{color:#718198}
-#workbench .wbv2-detail dl>div{border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-detail dt{color:#718198}
-#workbench .wbv2-report-toggle{border:1px solid #3478d1;background:#ffffff;color:#3478d1}
-#workbench .wbv2-report-detail{border:1px solid #dce6f4}
-#workbench .wbv2-report-meta{background:#ffffff;color:#718198}
-#workbench .wbv2-report-detail>div:not(.wbv2-report-meta){border-top:1px solid #dce6f4}
-#workbench .wbv2-report-detail p{background:#ffffff;color:#718198}
-#workbench .wbv2-empty{background:#f0f5fc;color:#718198}
-#workbench .wbv2-event-list article{border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-event-list time{color:#718198}
-#workbench .wbv2-adverse article{border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-risk-metrics>div{border:1px solid #dce6f4;background:#ffffff}
-#workbench .wbv2-risk-metrics small{color:#718198}
-#workbench .wbv2-risk-dl>div{border-bottom:1px dashed #dce6f4}
-#workbench .wbv2-risk-dl dt{color:#718198}
-#workbench .wbv2-risk-labs>div{border:1px solid #dce6f4;background:#ffffff}
-#workbench .wbv2-risk-labs small{color:#718198}
-#workbench .wbv2-risk-note{color:#718198}
-#workbench .wbv2-risk-record p{border-bottom:1px dashed #dce6f4;color:#718198}
-#workbench .wbv2-contact small{color:#718198}
-#workbench .wbv2-select{accent-color:#3478d1}
-#workbench .wbv2-message>small{color:#718198}
-#workbench .wbv2-message label{color:#718198}
-#workbench .wbv2-message textarea{border:1px solid #dce6f4;background:#ffffff;color:#293e58}
-#workbench .wbv2-message-review{border:1px solid #dce6f4;background:#ffffff;color:#718198}
-#workbench .wbv2-record{border:1px solid #dce6f4;background:#ffffff;color:#3478d1}
-#workbench .wbv2-message p{color:#718198}
-#workbench{background:#ffffff;color:#293e58}
-#workbench .wbv2{color:#293e58}
-#workbench .wbv2-back,#workbench .wbv2-patient{color:#3478d1;border:1px solid #f0f5fc}
-#workbench .wbv2-panel,#workbench .wbv2-patient-summary{border-color:#f0f5fc}
-#workbench .wbv2-wide{background:#3478d1;border-color:#3478d1;box-shadow:0 4px 12px #3478d11a}
-#workbench .wbv2-outline{color:#3478d1;border-color:#dce6f4;background:#ffffff}
-#workbench .wbv2-initial{background:#f0f5fc;color:#3478d1}
-#workbench .wbv2-kpi{background:#ffffff;border-color:#f0f5fc}
-#workbench .wbv2-kpi b{color:#3478d1}
-#workbench .wbv2-kpi span{background:#f0f5fc;color:#3478d1}
-#workbench .wbv2-pills button{border:1px solid #f0f5fc;color:#3478d1}
-#workbench .wbv2-pills button.active{background:#3478d1;border-color:#3478d1}
-#workbench .wbv2-search{border-color:#f0f5fc}
-#workbench .wbv2-switch-patient{color:#3478d1;border-color:#f0f5fc;background:#ffffff}
-#workbench .wbv2-bar i{background:#3478d1}
-#workbench .wbv2-research-kpi>div{background:#ffffff;border-color:#f0f5fc}
-#workbench .wbv2-research-kpi b{color:#3478d1}
-#workbench .dx-scope{color:#3478d1}
-#workbench .dx-mini-avatar{background:#f0f5fc;color:#3478d1}
-#workbench .dx-filter button{background:#ffffff;border:1px solid #f0f5fc;color:#3478d1}
-#workbench .dx-filter button.active{background:#f0f5fc;border-color:#dce6f4;color:#3478d1}
-#workbench .dx-patient{border:1px solid #f0f5fc}
-#workbench .dx-patient-top>div button{color:#3478d1}
-#workbench .dx-patient-top small{color:#3478d1}
-#workbench .dx-chat-pill{background:#f0f5fc;color:#3478d1}
-#workbench .dx-patient>p{color:#3478d1}
-#workbench .dx-owner{border-top:1px solid #f0f5fc;color:#3478d1}
-#workbench .dx-record-entry{background:#ffffff;color:#3478d1}
-#workbench .dx-record-entry b{color:#3478d1}
-#workbench .dx-record-entry small{color:#3478d1}
-#workbench .dx-info{border:1px solid #f0f5fc;background:#ffffff}
-#workbench .dx-info p{color:#3478d1}
-#workbench .dx-info summary{color:#3478d1}
-#workbench .dx-info label,#workbench #dxChat label{color:#3478d1}
-#workbench .dx-info input,#workbench .dx-info select,#workbench #dxChat textarea{border:1px solid #f0f5fc;background:#ffffff;color:#3478d1}
-#workbench .dx-member small{color:#3478d1}
-#workbench .dx-member em{background:#ffffff;color:#3478d1}
-#workbench .dx-audit{border-bottom:1px solid #f0f5fc}
-#workbench .dx-audit small{color:#3478d1}
-#workbench .dx-role{border:1px solid #f0f5fc;background:#ffffff;color:#3478d1}
-#workbench .dx-role.active{border-color:#3478d1;background:#ffffff}
-#workbench .dx-readonly{background:#ffffff;color:#3478d1}
-#workbench .dx-record-tabs{border-bottom:1px solid #f0f5fc}
-#workbench .dx-record-tabs button{color:#3478d1}
-#workbench .dx-record-tabs button.active{color:#3478d1;border-color:#3478d1}
-#workbench .dx-data-row{border-bottom:1px solid #f0f5fc}
-#workbench .dx-data-row span{color:#3478d1}
-#workbench .dx-data-row b{color:#3478d1}
-#workbench .dx-data-row small{color:#3478d1}
-#workbench .dx-metric small{color:#3478d1}
-#workbench .dx-metric b{color:#3478d1}
-#workbench .dx-trend-empty{background:#ffffff;color:#3478d1}
-#workbench .dx-trend-empty b{color:#3478d1}
-#workbench .dx-bubble{background:#ffffff;border:1px solid #f0f5fc}
-#workbench .dx-bubble small{color:#3478d1}
-#workbench .dx-bubble.sent{background:#f0f5fc;color:#3478d1}
-/* Doctor-only palette matched to the supplied reference: #3480e6 → #2367c2. */
-#workbench{background:#f3f6fc;--coral:#2d76d7;--coral-dark:#2367c2;--ink:#243b55;color:#243b55;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
-#workbench .dx-top h1{color:#263749;font-size:23px;font-weight:650;letter-spacing:.1px}#workbench .dx-top small{color:#788ba4;letter-spacing:1.4px}
-#workbench .dx-hero{background:linear-gradient(160deg,#3480e6,#2367c2);padding:20px 18px;border-radius:20px;box-shadow:0 8px 22px #2d76d718}
-#workbench .dx-person{gap:13px;align-items:center}#workbench .dx-avatar{width:76px;height:76px;flex:0 0 76px;border:2px solid #e5efff;border-radius:50%;background:#fff;padding:0;overflow:hidden;box-shadow:0 3px 10px #124f991c}#workbench .dx-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+#workbench .wbv2-patient-summary small{color:#917161}
+#workbench .wbv2-detail dl>div{border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-detail dt{color:#917161}
+#workbench .wbv2-report-toggle{border:1px solid #ac6642;background:#ffffff;color:#ac6642}
+#workbench .wbv2-report-detail{border:1px solid #f0e5e0}
+#workbench .wbv2-report-meta{background:#ffffff;color:#917161}
+#workbench .wbv2-report-detail>div:not(.wbv2-report-meta){border-top:1px solid #f0e5e0}
+#workbench .wbv2-report-detail p{background:#ffffff;color:#917161}
+#workbench .wbv2-empty{background:#faf5f2;color:#917161}
+#workbench .wbv2-event-list article{border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-event-list time{color:#917161}
+#workbench .wbv2-adverse article{border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-risk-metrics>div{border:1px solid #f0e5e0;background:#ffffff}
+#workbench .wbv2-risk-metrics small{color:#917161}
+#workbench .wbv2-risk-dl>div{border-bottom:1px dashed #f0e5e0}
+#workbench .wbv2-risk-dl dt{color:#917161}
+#workbench .wbv2-risk-labs>div{border:1px solid #f0e5e0;background:#ffffff}
+#workbench .wbv2-risk-labs small{color:#917161}
+#workbench .wbv2-risk-note{color:#917161}
+#workbench .wbv2-risk-record p{border-bottom:1px dashed #f0e5e0;color:#917161}
+#workbench .wbv2-contact small{color:#917161}
+#workbench .wbv2-select{accent-color:#ac6642}
+#workbench .wbv2-message>small{color:#917161}
+#workbench .wbv2-message label{color:#917161}
+#workbench .wbv2-message textarea{border:1px solid #f0e5e0;background:#ffffff;color:#513b30}
+#workbench .wbv2-message-review{border:1px solid #f0e5e0;background:#ffffff;color:#917161}
+#workbench .wbv2-record{border:1px solid #f0e5e0;background:#ffffff;color:#ac6642}
+#workbench .wbv2-message p{color:#917161}
+#workbench{background:#ffffff;color:#513b30}
+#workbench .wbv2{color:#513b30}
+#workbench .wbv2-back,#workbench .wbv2-patient{color:#ac6642;border:1px solid #faf5f2}
+#workbench .wbv2-panel,#workbench .wbv2-patient-summary{border-color:#faf5f2}
+#workbench .wbv2-wide{background:#ac6642;border-color:#ac6642;box-shadow:0 4px 12px #ac66421a}
+#workbench .wbv2-outline{color:#ac6642;border-color:#f0e5e0;background:#ffffff}
+#workbench .wbv2-initial{background:#faf5f2;color:#ac6642}
+#workbench .wbv2-kpi{background:#ffffff;border-color:#faf5f2}
+#workbench .wbv2-kpi b{color:#ac6642}
+#workbench .wbv2-kpi span{background:#faf5f2;color:#ac6642}
+#workbench .wbv2-pills button{border:1px solid #faf5f2;color:#ac6642}
+#workbench .wbv2-pills button.active{background:#ac6642;border-color:#ac6642}
+#workbench .wbv2-search{border-color:#faf5f2}
+#workbench .wbv2-switch-patient{color:#ac6642;border-color:#faf5f2;background:#ffffff}
+#workbench .wbv2-bar i{background:#ac6642}
+#workbench .wbv2-research-kpi>div{background:#ffffff;border-color:#faf5f2}
+#workbench .wbv2-research-kpi b{color:#ac6642}
+#workbench .dx-scope{color:#ac6642}
+#workbench .dx-mini-avatar{background:#faf5f2;color:#ac6642}
+#workbench .dx-filter button{background:#ffffff;border:1px solid #faf5f2;color:#ac6642}
+#workbench .dx-filter button.active{background:#faf5f2;border-color:#f0e5e0;color:#ac6642}
+#workbench .dx-patient{border:1px solid #faf5f2}
+#workbench .dx-patient-top>div button{color:#ac6642}
+#workbench .dx-patient-top small{color:#ac6642}
+#workbench .dx-chat-pill{background:#faf5f2;color:#ac6642}
+#workbench .dx-patient>p{color:#ac6642}
+#workbench .dx-owner{border-top:1px solid #faf5f2;color:#ac6642}
+#workbench .dx-record-entry{background:#ffffff;color:#ac6642}
+#workbench .dx-record-entry b{color:#ac6642}
+#workbench .dx-record-entry small{color:#ac6642}
+#workbench .dx-info{border:1px solid #faf5f2;background:#ffffff}
+#workbench .dx-info p{color:#ac6642}
+#workbench .dx-info summary{color:#ac6642}
+#workbench .dx-info label,#workbench #dxChat label{color:#ac6642}
+#workbench .dx-info input,#workbench .dx-info select,#workbench #dxChat textarea{border:1px solid #faf5f2;background:#ffffff;color:#ac6642}
+#workbench .dx-member small{color:#ac6642}
+#workbench .dx-member em{background:#ffffff;color:#ac6642}
+#workbench .dx-audit{border-bottom:1px solid #faf5f2}
+#workbench .dx-audit small{color:#ac6642}
+#workbench .dx-role{border:1px solid #faf5f2;background:#ffffff;color:#ac6642}
+#workbench .dx-role.active{border-color:#ac6642;background:#ffffff}
+#workbench .dx-readonly{background:#ffffff;color:#ac6642}
+#workbench .dx-record-tabs{border-bottom:1px solid #faf5f2}
+#workbench .dx-record-tabs button{color:#ac6642}
+#workbench .dx-record-tabs button.active{color:#ac6642;border-color:#ac6642}
+#workbench .dx-data-row{border-bottom:1px solid #faf5f2}
+#workbench .dx-data-row span{color:#ac6642}
+#workbench .dx-data-row b{color:#ac6642}
+#workbench .dx-data-row small{color:#ac6642}
+#workbench .dx-metric small{color:#ac6642}
+#workbench .dx-metric b{color:#ac6642}
+#workbench .dx-trend-empty{background:#ffffff;color:#ac6642}
+#workbench .dx-trend-empty b{color:#ac6642}
+#workbench .dx-bubble{background:#ffffff;border:1px solid #faf5f2}
+#workbench .dx-bubble small{color:#ac6642}
+#workbench .dx-bubble.sent{background:#faf5f2;color:#ac6642}
+/* Doctor-only palette matched to the supplied reference: #c36c40 → #995635. */
+#workbench{background:#fbf6f4;--coral:#af643e;--coral-dark:#995635;--ink:#4e372b;color:#4e372b;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+#workbench .dx-top h1{color:#44332b;font-size:23px;font-weight:650;letter-spacing:.1px}#workbench .dx-top small{color:#9b7a6a;letter-spacing:1.4px}
+#workbench .dx-hero{background:linear-gradient(160deg,#c36c40,#995635);padding:20px 18px;border-radius:20px;box-shadow:0 8px 22px #af643e18}
+#workbench .dx-person{gap:13px;align-items:center}#workbench .dx-avatar{width:76px;height:76px;flex:0 0 76px;border:2px solid #f9f0eb;border-radius:50%;background:#fff;padding:0;overflow:hidden;box-shadow:0 3px 10px #713d241c}#workbench .dx-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 #workbench .dx-work-chip{display:inline-block;background:#ffffff29;border-radius:5px;padding:3px 7px;color:#fff;font-size:10px;font-weight:600;line-height:1.4;margin-bottom:7px}
-#workbench .dx-hero h2{font-size:21px;line-height:1.4;font-weight:650;letter-spacing:.1px;margin:0;color:#fff}#workbench .dx-hero p{font-size:13px;color:#e1edff;margin:6px 0 0;line-height:1.5}
-#workbench .dx-hero-total{margin-top:20px}#workbench .dx-hero-total b{font-size:40px;font-weight:650;letter-spacing:-1px}#workbench .dx-hero-total small{color:#dceaff;font-size:12px}#workbench .dx-hero-total button{background:#ffffff22;border-color:#ffffff30;border-radius:20px;font-weight:600;color:#fff}
-#workbench .dx-stats button,#workbench .dx-team-list,#workbench .dx-task,#workbench .dx-patient,#workbench .dx-info{background:#fff;border-color:#e1e8f2;box-shadow:0 3px 12px #254c7a03}
-#workbench .dx-stats b{color:#2e70c7}#workbench .dx-section h2{color:#2c4059;border-left-color:#8bb5eb;font-size:17px;font-weight:650}#workbench .dx-section>button{color:#4679b9}
-#workbench .dx-mini-avatar,#workbench .dx-task>i{background:#e8f0fd;color:#3979d1}#workbench .dx-task>i.warm{background:#fff0e5;color:#bb774c}
-#workbench .dx-nav{background:#fff;border-color:#dfe7f2}#workbench .dx-nav button.active{color:#2d76d7}#workbench .dx-nav button{font-size:12px}#workbench .dx-tools button{background:#fff;border-color:#e1e8f2}
-#workbench .wbv2-wide{background:#2d76d7;border-color:#2d76d7}#workbench .dx-filter button.active,#workbench .dx-role.active{background:#eaf2ff;border-color:#b7d0f0;color:#286ac2}#workbench .dx-record-entry,#workbench .dx-chat-pill{background:#edf3fd;color:#3471c1}#workbench .wbv2-risk-hero,#workbench .wbv2-log-hero{background:#edf3fc;border-color:#d9e5f6;color:#315e9b}
+#workbench .dx-hero h2{font-size:21px;line-height:1.4;font-weight:650;letter-spacing:.1px;margin:0;color:#fff}#workbench .dx-hero p{font-size:13px;color:#f8ede8;margin:6px 0 0;line-height:1.5}
+#workbench .dx-hero-total{margin-top:20px}#workbench .dx-hero-total b{font-size:40px;font-weight:650;letter-spacing:-1px}#workbench .dx-hero-total small{color:#f7eae4;font-size:12px}#workbench .dx-hero-total button{background:#ffffff22;border-color:#ffffff30;border-radius:20px;font-weight:600;color:#fff}
+#workbench .dx-stats button,#workbench .dx-team-list,#workbench .dx-task,#workbench .dx-patient,#workbench .dx-info{background:#fff;border-color:#efe8e4;box-shadow:0 3px 12px #6d463203}
+#workbench .dx-stats b{color:#a05f3e}#workbench .dx-section h2{color:#523d33;border-left-color:#ddb099;font-size:17px;font-weight:650}#workbench .dx-section>button{color:#99684f}
+#workbench .dx-mini-avatar,#workbench .dx-task>i{background:#f9f0ec;color:#af6845}#workbench .dx-task>i.warm{background:#fff0e5;color:#bb774c}
+#workbench .dx-nav{background:#fff;border-color:#efe6e2}#workbench .dx-nav button.active{color:#af643e}#workbench .dx-nav button{font-size:12px}#workbench .dx-tools button{background:#fff;border-color:#efe8e4}
+#workbench .wbv2-wide{background:#af643e;border-color:#af643e}#workbench .dx-filter button.active,#workbench .dx-role.active{background:#faf3ef;border-color:#e7cdc0;color:#9a5939}#workbench .dx-record-entry,#workbench .dx-chat-pill{background:#faf3f0;color:#9c6042}#workbench .wbv2-risk-hero,#workbench .wbv2-log-hero{background:#faf3ef;border-color:#f2e4dd;color:#7b503a}
 
-#workbench .dx-scope,#workbench .dx-stats span,#workbench .dx-team-list small,#workbench .dx-task small,#workbench .dx-tools small{color:#718198}#workbench .dx-team-list b,#workbench .dx-task b,#workbench .dx-tools b{color:#2b4059}#workbench .dx-team-list em{color:#738ba9}#workbench .dx-nav button:not(.active){color:#8290a3}
+#workbench .dx-scope,#workbench .dx-stats span,#workbench .dx-team-list small,#workbench .dx-task small,#workbench .dx-tools small{color:#917161}#workbench .dx-team-list b,#workbench .dx-task b,#workbench .dx-tools b{color:#523d32}#workbench .dx-team-list em{color:#9b7a6a}#workbench .dx-nav button:not(.active){color:#9f7f6f}
 
 /* Neutral readable details instead of cyan body text. */
-#workbench .wbv2{color:#293e58}#workbench .dx-patient>p,#workbench .dx-owner,#workbench .dx-patient-top small,#workbench .dx-info p,#workbench .dx-info label,#workbench #dxChat label,#workbench .dx-member small,#workbench .dx-audit small,#workbench .dx-data-row span,#workbench .dx-data-row small,#workbench .dx-record-entry small,#workbench .dx-bubble small{color:#718198}
-#workbench .dx-data-row b,#workbench .dx-patient-top>div button,#workbench .dx-member b{color:#293e58}#workbench .dx-info input,#workbench .dx-info select,#workbench #dxChat textarea{color:#293e58;border-color:#dce6f4}
-#workbench .dx-record-tabs button{color:#718198}#workbench .dx-record-tabs button.active{color:#2d76d7;border-color:#2d76d7}#workbench .dx-bubble.sent{background:#eaf2ff;color:#2c4d78}#workbench .wbv2-chart strong,#workbench .wbv2-logs time{color:#2d76d7}#workbench .wbv2-num,#workbench .wbv2-fields>div>b,#workbench .wbv2-research-kpi i{background:#e8f0fd;color:#3979d1}
+#workbench .wbv2{color:#513b30}#workbench .dx-patient>p,#workbench .dx-owner,#workbench .dx-patient-top small,#workbench .dx-info p,#workbench .dx-info label,#workbench #dxChat label,#workbench .dx-member small,#workbench .dx-audit small,#workbench .dx-data-row span,#workbench .dx-data-row small,#workbench .dx-record-entry small,#workbench .dx-bubble small{color:#917161}
+#workbench .dx-data-row b,#workbench .dx-patient-top>div button,#workbench .dx-member b{color:#513b30}#workbench .dx-info input,#workbench .dx-info select,#workbench #dxChat textarea{color:#513b30;border-color:#f0e5e0}
+#workbench .dx-record-tabs button{color:#917161}#workbench .dx-record-tabs button.active{color:#af643e;border-color:#af643e}#workbench .dx-bubble.sent{background:#faf3ef;color:#5d3f30}#workbench .wbv2-chart strong,#workbench .wbv2-logs time{color:#af643e}#workbench .wbv2-num,#workbench .wbv2-fields>div>b,#workbench .wbv2-research-kpi i{background:#f9f0ec;color:#af6845}
 
-#outpatient307{background:#f3f6fc;--pt-accent:#2d76d7;--pt-accent-dark:#2367c2;--pt-soft:#edf3fc;--pt-line:#dce6f4;color:#293e58}
-#outpatient307 .op-card{background:#fff;border-color:#e1e8f2}#outpatient307 .op-head h1,#outpatient307 h2,#outpatient307 h3{color:#293e58}#outpatient307 .op-brand{background:#e8f0fd;color:#3979d1}
+#outpatient307{background:#fbf6f4;--pt-accent:#af643e;--pt-accent-dark:#995635;--pt-soft:#faf3ef;--pt-line:#f0e5e0;color:#513b30}
+#outpatient307 .op-card{background:#fff;border-color:#efe8e4}#outpatient307 .op-head h1,#outpatient307 h2,#outpatient307 h3{color:#513b30}#outpatient307 .op-brand{background:#f9f0ec;color:#af6845}
 
-.dx-op-summary{margin:18px 0;padding:14px;background:#fff;border:1px solid #dce6f4;border-radius:18px}.dx-op-summary .dx-section{margin:0 0 12px}.dx-op-counts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.dx-op-counts button{border:0;border-radius:12px;background:#f3f6fc;padding:12px 4px;color:#293e58}.dx-op-counts b{display:block;font-size:25px;color:#2d76d7}.dx-op-counts b.urgent{color:#bc443e}.dx-op-counts span{display:block;font-size:12px;margin-top:5px}.dx-op-summary .dx-task{margin-bottom:0}
+.dx-op-summary{margin:18px 0;padding:14px;background:#fff;border:1px solid #f0e5e0;border-radius:18px}.dx-op-summary .dx-section{margin:0 0 12px}.dx-op-counts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.dx-op-counts button{border:0;border-radius:12px;background:#fbf6f4;padding:12px 4px;color:#513b30}.dx-op-counts b{display:block;font-size:25px;color:#af643e}.dx-op-counts b.urgent{color:#bc443e}.dx-op-counts span{display:block;font-size:12px;margin-top:5px}.dx-op-summary .dx-task{margin-bottom:0}

@@ -1,0 +1,78 @@
+/* Quiet cream surfaces, soft illustration colors, and readable detail pages. */
+img[src*="assets/medical-illustrations/"]:not([src*="team"]){mix-blend-mode:multiply}
+#outpatient307[data-op-audience="patient"] .op-head+.op-link{display:none}
+#outpatient307[data-op-audience="patient"] .care-config{margin:-4px 0 18px;background:transparent}
+#outpatient307[data-op-audience="patient"]{background:#faf7f3;color:#302f2c;padding:22px 18px 36px!important}
+#outpatient307[data-op-audience="patient"] .op-head{border:0;padding:0;margin:0 0 22px;gap:12px}
+#outpatient307[data-op-audience="patient"] .op-head .iconbtn{width:38px;height:38px;border-color:#e9e3dc;color:#61564e;box-shadow:0 2px 7px #58493705}
+#outpatient307[data-op-audience="patient"] .op-head h1{color:#302f2c;font-size:22px;letter-spacing:0;margin-top:3px;line-height:1.4}
+#outpatient307[data-op-audience="patient"] .op-head small{font-size:10px;color:#8a7d72;letter-spacing:.3px}
+#outpatient307 .care-detail-intro{display:flex;align-items:center;gap:8px;position:relative;overflow:hidden;padding:20px 17px;margin-bottom:22px;border-radius:22px;background:linear-gradient(120deg,#f5ebe1,#f6f1e9);border:1px solid #eee3d7}
+#outpatient307 .care-detail-intro>div{flex:1;min-width:0}
+#outpatient307 .care-detail-intro span{display:block;font-size:10px;font-weight:600;letter-spacing:.6px;color:#8f745f}
+#outpatient307 .care-detail-intro h2{font-size:20px;line-height:1.5;font-weight:700;letter-spacing:0;margin:7px 0;color:#353631;text-wrap:balance}
+#outpatient307 .care-detail-intro h2:after{display:none}
+#outpatient307 .care-detail-intro p{font-size:12px;color:#746e64;line-height:1.8;margin:0}
+#outpatient307 .care-detail-intro>img{flex:0 0 78px;width:78px;height:78px;border-radius:24px;object-fit:contain;filter:saturate(.65);align-self:center}
+#outpatient307 .care-detail-scales{background:linear-gradient(115deg,#f0f2e9,#f7f4eb);border-color:#e4e8dc}
+#outpatient307 .care-detail-care{background:linear-gradient(115deg,#eef2ed,#f5f4ed);border-color:#e2e8df}
+#outpatient307 .care-detail-alerts{background:linear-gradient(115deg,#f8ede5,#f8f3ed)}
+#outpatient307[data-op-audience="patient"] .op-card{border:1px solid #ebe7e0;border-radius:20px;background:#fff;box-shadow:0 4px 14px #56463904;padding:18px;margin:14px 0}
+#outpatient307[data-op-audience="patient"] .op-card h3{font-size:15px;line-height:1.6;color:#34342f;margin:0 0 8px;font-weight:650}
+#outpatient307[data-op-audience="patient"] .op-card p{font-size:12px;line-height:1.85;color:#77756e}
+#outpatient307[data-op-audience="patient"] .op-card small{font-size:11px;color:#878178;line-height:1.65}
+#outpatient307[data-op-audience="patient"] .op-section-head h2,#outpatient307[data-op-audience="patient"] .op-section-title{font-size:16px;line-height:1.6;color:#34342f;border:0;padding-left:0}
+#outpatient307[data-op-audience="patient"] .op-chip{font-size:10px;border-radius:7px;background:#f2f0eb;color:#827b70;padding:4px 7px;font-weight:500}
+#outpatient307[data-op-audience="patient"] .op-chip.attention{background:#fbefd9;color:#956d34}
+#outpatient307[data-op-audience="patient"] .op-chip.normal{background:#edf3ed;color:#5e8069}
+#outpatient307[data-op-audience="patient"] .op-chip.urgent,#outpatient307[data-op-audience="patient"] .op-chip.high{background:#fbe9e4;color:#ac5445}
+#outpatient307 .care-assessment-head{display:flex;align-items:center;gap:10px;margin-bottom:15px}
+#outpatient307 .care-assessment-title{flex:1;min-width:0}
+#outpatient307 .care-assessment-title h3{font-size:14px;margin:0;line-height:1.5}
+#outpatient307 .care-assessment-title p{margin:4px 0 0;font-size:10px;line-height:1.6;color:#8b8378}
+#outpatient307 .care-date-tile{flex:0 0 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;width:40px;height:48px;border-radius:11px;background:#f6f2eb;color:#88745d}
+#outpatient307 .care-date-tile b{font-size:19px;line-height:1.2;font-weight:650}
+#outpatient307 .care-date-tile small{font-size:9px;line-height:1.4;color:#938575}
+#outpatient307[data-op-audience="patient"] .op-scale-row{padding:13px 10px;border:1px solid #edf0e9;border-radius:14px;background:#f7f9f5;margin:8px 0 0;gap:11px;min-height:79px}
+#outpatient307[data-op-audience="patient"] .op-scale-row .op-scale-icon{width:45px;height:48px;flex:0 0 45px;background:transparent;border-radius:12px;overflow:visible}
+#outpatient307[data-op-audience="patient"] .op-scale-row .op-medical-art{width:45px;height:48px;object-fit:contain;filter:saturate(.64)}
+#outpatient307[data-op-audience="patient"] .op-scale-row>span:nth-child(2){flex:1;min-width:0}
+#outpatient307[data-op-audience="patient"] .op-scale-row b{font-size:13px;line-height:1.6;color:#383e36;font-weight:650}
+#outpatient307[data-op-audience="patient"] .op-scale-row small{font-size:11px;color:#82897a;margin-top:5px}
+#outpatient307[data-op-audience="patient"] .op-scale-row i{font-size:21px;color:#a0aa96;margin-left:0}
+#outpatient307[data-op-audience="patient"] .op-scale-row:disabled{opacity:.65}
+#outpatient307[data-op-audience="patient"] .op-scale-row:not(:disabled):hover{background:#f0f4eb;border-color:#dce5d5}
+#outpatient307[data-op-audience="patient"] .op-note{font-size:11px;line-height:1.85;color:#898176}
+#outpatient307[data-op-audience="patient"] .op-rules,#outpatient307[data-op-audience="patient"] .op-settings{border-color:#e9e4dc;background:#fefcf9;border-radius:16px;padding:15px;font-size:12px}
+#outpatient307[data-op-audience="patient"] .op-rules summary{color:#776955;font-size:12px;line-height:1.6}
+#outpatient307[data-op-audience="patient"] .op-record{padding:16px 12px;background:#fff;border:1px solid #ebe7e0;border-radius:14px;margin:8px 0;gap:12px}
+#outpatient307[data-op-audience="patient"] .op-record b{font-size:13px;color:#353631;line-height:1.6}
+#outpatient307[data-op-audience="patient"] .op-record small{font-size:10px;line-height:1.7;color:#8c8275}
+#outpatient307[data-op-audience="patient"] .op-empty{border:1px dashed #e2dfd6;background:#f6f4ee;border-radius:16px;margin:12px 0;padding:24px 14px;color:#8c8578;font-size:12px}
+#outpatient307[data-op-audience="patient"] label:not(.op-options label){font-size:12px;color:#625e54;line-height:1.7}
+#outpatient307[data-op-audience="patient"] input:not([type=radio]):not([type=checkbox]),#outpatient307[data-op-audience="patient"] select,#outpatient307[data-op-audience="patient"] textarea{border-color:#e5e1d8;background:#fdfcf9;padding:12px;border-radius:12px;font-size:13px;color:#3e3c35}
+#outpatient307[data-op-audience="patient"] .op-primary{background:#a97252;box-shadow:0 3px 8px #9d725215;border-radius:12px;font-size:13px;min-height:46px;line-height:1.5}
+#outpatient307[data-op-audience="patient"] .op-inline button,#outpatient307[data-op-audience="patient"] .op-card>button:not(.op-primary){border-color:#e5dfd3;background:#faf7f1;color:#8a684c;min-height:39px;font-size:12px}
+#outpatient307[data-op-audience="patient"] .op-scale-intro{background:#f0f3e9;border:1px solid #e1e7d8;color:#6e7c60;padding:16px 17px;line-height:1.9;font-size:12px;border-radius:17px}
+#outpatient307[data-op-audience="patient"] .op-scale-intro p{margin-top:0}
+#outpatient307[data-op-audience="patient"] .op-question{background:#fff;border:1px solid #ebe7e0;border-radius:18px;padding:18px 14px;margin-bottom:12px}
+#outpatient307[data-op-audience="patient"] .op-question legend{font-size:14px;line-height:1.8;color:#383932;margin-bottom:14px}
+#outpatient307[data-op-audience="patient"] .op-question em{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#f0f2e8;color:#7c896b;font-size:11px}
+#outpatient307[data-op-audience="patient"] .op-options span{border-color:#e5e6dd;color:#6e7165;background:#fafbf7;font-size:12px;line-height:1.5;padding:12px 3px}
+#outpatient307[data-op-audience="patient"] .op-options input:checked+span{background:#818f72;border-color:#818f72;color:white}
+#outpatient307[data-op-audience="patient"] .op-options input:focus-visible+span{outline-color:#aebd9d}
+#outpatient307[data-op-audience="patient"] .op-risk.urgent{border-left:3px solid #d38775}
+#outpatient307[data-op-audience="patient"] .op-risk.high{border-left:3px solid #d4aa72}
+#outpatient307 .care-alert-summary{display:flex;gap:14px;margin:0 0 18px}
+#outpatient307 .care-alert-summary>div{display:flex;align-items:baseline;gap:8px;flex:1;background:#fff;border:1px solid #ede4db;border-radius:15px;padding:16px 13px}
+#outpatient307 .care-alert-summary strong{font-size:26px;color:#ae7960;font-weight:650}
+#outpatient307 .care-alert-summary span{font-size:11px;color:#847365}
+.wn-today{border-color:#e9e3db;box-shadow:0 3px 14px #634d3904;padding:20px 16px 10px}
+.wn-today>header{padding-bottom:16px}
+.wn-task{min-height:77px;gap:10px;border-bottom-color:#efebe4}
+.wn-task-name b{font-weight:600;line-height:1.55;color:#363630}
+.wn-task-name small,.wn-task-date{color:#8b8175;line-height:1.6}
+.wn-task em{font-size:10px;background:#faf1e9;border-radius:6px;padding:4px 6px;color:#a97654}
+.wn-task:has(.is-done) em{background:#edf4ec;color:#64836b}
+.wn-task-compact{min-height:62px}
+@media(max-width:370px){#outpatient307 .care-detail-intro>img{flex-basis:62px;width:62px;height:74px}#outpatient307 .care-detail-intro h2{font-size:18px}#outpatient307 .care-assessment-head{gap:7px}#outpatient307 .care-assessment-title h3{font-size:13px}}
