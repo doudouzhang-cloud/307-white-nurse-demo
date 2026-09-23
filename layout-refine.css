@@ -1,0 +1,26 @@
+/* Keep the interactive phone central and the explanation rail brief. */
+@media (min-width:901px){
+ .demo-header,.demo-layout{max-width:1100px}
+ .demo-layout{grid-template-columns:190px 410px minmax(0,320px);gap:22px;justify-content:center}
+ .demo-guide{width:100%;max-width:320px;gap:10px;position:sticky;top:18px}
+ .demo-guide .guide-card{padding:21px 22px}
+ .demo-guide .guide-card h2{font-size:20px;margin:8px 0 8px}
+ .demo-guide .guide-card p{font-size:12px;line-height:1.7;margin:0}
+ .demo-guide .guide-next{margin-top:18px;min-height:42px;padding:10px 12px;font-size:12px}
+ .guide-help{border:1px solid #eadbd0;border-radius:14px;background:#fffdfb;padding:0 17px;color:#77675c}
+ .guide-help summary{cursor:pointer;list-style:none;padding:13px 0;font-size:12px;font-weight:600;color:#805a47}
+ .guide-help summary::-webkit-details-marker{display:none}
+ .guide-help summary:after{content:'⌄';float:right}
+ .guide-help[open] summary:after{content:'⌃'}
+ .guide-help p{font-size:11px;line-height:1.65;margin:0 0 8px}
+ .guide-help small{display:block;font-size:10px;line-height:1.5;margin:0 0 14px;color:#a08e80}
+ body:has(#workbench.active) .demo-guide .guide-next,
+ body:has(#outpatient307.active) .demo-guide .guide-next,
+ body:has(#workbench.active) .guide-help,
+ body:has(#outpatient307.active) .guide-help{display:none}
+}
+@media (min-width:901px) and (max-width:1100px){
+ .demo-layout{grid-template-columns:165px 390px minmax(250px,320px);gap:16px;padding:0 18px 20px}
+ .demo-guide .guide-card{padding:18px}
+}
+@media (max-width:900px){.demo-guide{display:none}}
