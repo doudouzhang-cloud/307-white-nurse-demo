@@ -1,0 +1,53 @@
+/* A quiet neutral patient surface, with a blue outpatient entry. */
+:root{--pt-accent:#2e8ccf;--pt-accent-dark:#236da2;--pt-soft:#ebf5fc;--pt-line:#d4e8f7;--pt-entry:linear-gradient(115deg,#419cdd,#2a83c2);--pt-entry-text:#fff;--pt-entry-muted:#e1f1fc;--pt-icon:#ffffff25}
+:root[data-patient-tone=soft]{--pt-accent:#80796e;--pt-accent-dark:#635f57;--pt-soft:#f1f0eb;--pt-line:#e2dfd7;--pt-entry:linear-gradient(115deg,#f3f2ed,#eeede7);--pt-entry-text:#625e56;--pt-entry-muted:#878174;--pt-icon:#ffffffb0}
+#home{background:linear-gradient(180deg,#fafaf7,#f3f4f0 58%,#fafaf8)!important}
+#special,#phoneReady,#mode,#selfTask,#outpatient307{background:#f8f8f5}
+#home .home-today,#home .home-welcome,#home .home-alert,#home .home-chat,#home .home-composer,#special .task-card,#mode .mode-card{background:#fffefb;border-color:#e5e4dc;box-shadow:0 5px 20px #4b554708}
+#home .home-method-voice{background:linear-gradient(110deg,#7b8d95,#2a82c1);box-shadow:0 5px 14px #297fbc15}
+#home .home-method-divider{background:#e9e8e1}
+#home .home-method-self .home-method-icon,#home .home-composer button,#home .home-task-icon{background:#f0f2ef;color:#77877c}
+#home .home-shortcuts .home-vip{background:#89978b;border-color:#89978b;box-shadow:none}
+#home .home-shortcuts button,#home .home-composer{border-color:#e4e3db}
+#special .banner,#phoneReady .ready-info,#mode .mode-note{background:#f1f2ee;border-color:#e3e4dc}
+#home .op-home-entry,#special .op-home-entry{background:var(--pt-entry);border:1px solid transparent;color:var(--pt-entry-text);padding:18px 15px;border-radius:19px;box-shadow:0 6px 16px #297fbc1a;gap:12px}
+#home .op-home-entry b,#special .op-home-entry b{font-size:15px;font-weight:600;line-height:1.6}
+#home .op-home-entry small,#special .op-home-entry small{color:var(--pt-entry-muted);font-size:11px;margin-top:5px;line-height:1.7}
+#home .op-home-icon,#special .op-home-icon{background:var(--pt-icon);color:inherit;width:38px;height:42px;border-radius:12px;font-size:17px}
+#home .op-home-entry i,#special .op-home-entry i{color:inherit;opacity:.8}
+:root[data-patient-tone=soft] #home .op-home-entry,:root[data-patient-tone=soft] #special .op-home-entry{border-color:#e1dfd7;box-shadow:none}
+.op307{color:#47505a;--coral:var(--pt-accent);--coral-dark:var(--pt-accent-dark)}
+.op307 .op-hero,.op307 .op-hero.small{background:linear-gradient(120deg,#e6f2fb,#f6f7f4);border-color:#cfe6f7;box-shadow:none}
+.op307 .op-hero h2{color:#206190}.op307 .op-hero p{color:#7d898e}.op307 .op-hero>span{color:#8c989e}.op307 .op-hero>div{border-color:#cbe4f6;color:#7c898f}.op307 .op-hero strong{color:var(--pt-accent)}
+.op307 .op-brand,.op307 .op-head small{color:#8a9398}
+.op307 .op-tabs{border-color:#d0e7f7}.op307 .op-tabs button{color:#899398}.op307 .op-tabs button.active{color:var(--pt-accent);border-color:var(--pt-accent)}
+.op307 .op-task,.op307 .op-card,.op307 .op-plan-fold,.op307 .op-settings,.op307 .op-rules{background:#fffefb;border-color:#e3e5df;box-shadow:0 3px 12px #42545305}
+.op307 .op-task-day,.op307 .op-fold-symbol,.op307 .op-scale-icon{background:var(--pt-soft);color:var(--pt-accent);border-color:var(--pt-line)}
+.op307 .op-task b,.op307 .op-fold-copy b,.op307 .op-section-head h2{color:#4c565f}
+.op307 .op-task p,.op307 .op-note,.op307 .op-card p,.op307 .op-fold-note{color:#87918e}
+.op307 .op-fold-content{background:linear-gradient(#fffefb,#f3f5f1)}
+.op307 .op-fold-chevron{border-color:#99a6ac}.op307 .op-fold-hint{background:#fffefb;color:#8b969c}.op307 .op-fold-status{border-color:#e7e9e2}
+.op307 .op-primary{background:var(--pt-accent);box-shadow:none}
+.op307 button:not(.iconbtn):not(.op-tabs button):not(.op-arrow):not(.op-primary):not(.op-scale-row):not(.op-record){border-color:var(--pt-line);color:var(--pt-accent-dark);background:#fdfefb}
+.op307 .op-inline button.selected{background:var(--pt-accent)!important}
+.op307 .op-settings summary,.op307 .op-rules summary{color:#73818a}
+.op307 .op-scale-intro,.op307 .op-score-grid>div,.op307 .op-result:not(.urgent):not(.high){background:var(--pt-soft);color:#71838f}
+.op307 .op-score-grid b,.op307 .op-result h2{color:var(--pt-accent)}
+.op307 .op-options span{background:#fffefb;border-color:#cfe6f7;color:#75828a}
+.op307 .op-options input:checked+span{background:var(--pt-accent);border-color:var(--pt-accent);color:#fff}
+.op307 input[type=checkbox],.op307 input[type=radio],.op307 progress{accent-color:var(--pt-accent)}
+.op307 .op-question{border-color:#e2e6e2}.op307 .op-question legend{color:#22699b}
+.op307 input:not([type=radio]):not([type=checkbox]),.op307 textarea,.op307 select{border-color:#cbe4f6;background:#fff;color:#206291}
+.op307 .op-alert.urgent,.op307 .op-alert.high,.op307 .op-result.urgent{background:#fcece7;color:#a14235}.op307 .op-chip.urgent,.op307 .op-chip.high{background:#fae4df;color:#b65343}
+.tone-card{padding:21px!important}.tone-card h3{margin:0 0 7px;font-size:16px}.tone-card>p{font-size:12px;margin:0 0 16px;color:#8a8d86}
+.tone-toggle{display:flex;align-items:center;justify-content:space-between;gap:16px;cursor:pointer;font-size:13px;color:#2674ac}
+.tone-toggle input{appearance:none;-webkit-appearance:none;flex:0 0 40px;width:40px;height:23px;border:1px solid #c2dff4;border-radius:20px;background:#d3e8f7;position:relative;cursor:pointer;transition:background .18s;margin:0}
+.tone-toggle input:before{content:'';position:absolute;top:2px;left:2px;width:17px;height:17px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0002;transition:transform .18s}
+.tone-toggle input:checked{background:#939b8c;border-color:#939b8c}.tone-toggle input:checked:before{transform:translateX(17px)}
+.tone-toggle input:focus-visible{outline:2px solid #4399d6;outline-offset:3px}.tone-card small{display:block;margin-top:12px;color:#92998e;font-size:11px;line-height:1.7}
+.tone-compact{display:none;font-size:10px;gap:7px;color:#7d817a;white-space:nowrap}
+@media(max-width:900px){.tone-compact{display:flex}.demo-tools .demo-label{display:none}}
+@media(max-width:600px){.tone-compact{gap:4px;font-size:9px}.tone-compact input{flex-basis:32px;width:32px;height:20px}.tone-compact input:before{width:14px;height:14px}.tone-compact input:checked:before{transform:translateX(12px)}.demo-tools{gap:5px}.demo-header{padding-right:9px}.demo-tools button{padding:8px 6px}}
+#home .home-task-surface{background:#f4f5f1;box-shadow:none}
+#home .home-date small,#home .home-avatar>span{background:#8d9a90}
+#home .home-summary-button{background:#f1f4ef;border-color:#dde4da;color:#758474}

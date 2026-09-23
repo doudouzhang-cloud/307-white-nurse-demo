@@ -1,0 +1,12 @@
+/* Consistent local system type, no external font request. */
+:root{--font307:"SF Pro Text",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",sans-serif}
+html body,body button,body input,body textarea,body select,body summary,body .screen,body .demo-header,body .demo-nav,body .demo-guide{font-family:var(--font307);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body :is(h1,h2,h3,h4,b,strong,small,label,.eyebrow,.wb-quick-title,.wb-detail-head small,.backline small,.workbench-title small){font-family:var(--font307)!important}
+body :is(h1,h2,h3,h4){font-weight:600;letter-spacing:0;line-height:1.4}
+body :is(p,li){line-height:1.75}
+body :is(button,input,select,textarea){letter-spacing:.15px;line-height:1.5}
+body :is(b,strong){font-weight:600}
+.demo-header h1{font-weight:650;letter-spacing:.5px}.demo-kicker{font-weight:500;letter-spacing:1px}.demo-nav button{font-size:13px}.demo-nav>p{font-size:12px}
+.screen h1,.op-head h1{letter-spacing:0;font-weight:600}.op-head small{font-size:10px;line-height:1.7}.op-hero h2{font-weight:600;letter-spacing:.3px;font-size:25px}.op-hero p{font-size:13px;line-height:1.9}.op-tabs button{font-size:13px}.op-section-head h2{font-size:17px;letter-spacing:.25px}
+.guide-card p{font-size:14px}.op307 .op-note{font-size:11px}.op307 .op-card p{font-size:12px}.op307 .op-question legend{font-size:14px;font-weight:500}.op307 .op-scale-row b,.op307 .op-record b{font-size:13px}.op307 .op-scale-row small,.op307 .op-record small{font-size:11px;line-height:1.7}.op307 label:not(.op-options label){font-size:12px}.op307 .op-options span{font-size:12px}
+body pre,body code,.op-export textarea{font-family:ui-monospace,SFMono-Regular,Consolas,monospace}

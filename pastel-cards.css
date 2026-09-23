@@ -1,0 +1,30 @@
+/* Quiet report-card styling; original data and navigation stay intact. */
+.op307 .op-scale-row{--tile-bg:#ede9d7;--tile-ink:#8b8051;display:flex;align-items:center;gap:13px;width:100%;padding:17px 14px;margin:9px 0;background:#fff;border:1px solid #f0efec;border-radius:18px;text-align:left;box-shadow:none;min-height:85px;color:#393e3c}
+.op307 .op-scale-row[data-value=gad7]{--tile-bg:#eee8f6;--tile-ink:#917cab}
+.op307 .op-scale-row[data-value=phq9]{--tile-bg:#f6e7eb;--tile-ink:#c86f88}
+.op307 .op-scale-row[data-value=mdasi]{--tile-bg:#e5f0ec;--tile-ink:#669c91}
+.op307 .op-scale-row[data-value=tfi]{--tile-bg:#f8efd9;--tile-ink:#c29442}
+.op307 .op-scale-row[data-value=psqi]{--tile-bg:#e5f1fa;--tile-ink:#58a4da}
+.op307 .op-scale-row .op-scale-icon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:43px;border:0;border-radius:13px;background:var(--tile-bg);color:var(--tile-ink)}
+.op307 .op-scale-row>span:nth-child(2){flex:1;min-width:0}
+.op307 .op-scale-row b{font-size:14px;font-weight:600;line-height:1.65;color:#404440}
+.op307 .op-scale-row small{font-size:11px;color:#92928a;font-weight:400;margin-top:5px;line-height:1.6}
+.op307 .op-scale-row i{color:#b8bcb6;font-size:18px;margin-left:auto}
+.op307 .op-scale-row:hover{background:#fdfefc;border-color:#dfe6dd}
+.op307 .op-scale-row:focus-visible{outline:2px solid var(--tile-ink);outline-offset:2px}
+.op307 .op-task{--tile-bg:#e5efec;--tile-ink:#68998f;border:1px solid #eeefeb;background:#fff;box-shadow:none;border-radius:19px;padding:18px 14px;gap:14px;margin:11px 0;min-height:98px}
+.op307 .op-task[data-task-day="7"]{--tile-bg:#e4f1fa;--tile-ink:#53a1d9}
+.op307 .op-task[data-task-day="9"],.op307 .op-task[data-task-day="17"]{--tile-bg:#eeeadb;--tile-ink:#93875f}
+.op307 .op-task[data-task-day="11"],.op307 .op-task[data-task-day="14"]{--tile-bg:#eee9f6;--tile-ink:#9480b0}
+.op307 .op-task[data-task-day="21"],.op307 .op-task[data-task-kind="scale"][data-task-day="final"]{--tile-bg:#f7eed9;--tile-ink:#ba9042}
+.op307 .op-task[data-task-kind="video"],.op307 .op-task[data-task-kind="care"]{--tile-bg:#e6eeed;--tile-ink:#719b94}
+.op307 .op-task .op-task-day{display:flex;flex-direction:column;justify-content:center;flex:0 0 48px;width:48px;min-height:54px;padding:9px 3px;background:var(--tile-bg);color:var(--tile-ink);border:0;border-radius:14px;font-size:18px;font-weight:600;line-height:1.2}
+.op307 .op-task-day small{font-size:9px;font-weight:400;color:var(--tile-ink);opacity:.85;letter-spacing:.4px;margin-top:5px}
+.op307 .op-task b{font-size:14px;font-weight:600;line-height:1.65;color:#414741}
+.op307 .op-task p{font-size:11px;color:#91978e;margin:5px 0 8px}
+.op307 .op-task .op-arrow{color:#aab5ac}
+.op307 .op-task .op-chip{border-radius:6px;font-size:10px;padding:3px 7px}
+.op307 .op-task .op-chip.attention{background:#f6f1e4;color:#ab935d}
+.op307 .op-task .op-chip.normal{background:#eaf2eb;color:#7b9e7d}
+.op307 .op-fold-content .op-task{border-color:#ecefe9;background:#fff;padding:16px 12px;border-radius:17px}
+:root[data-patient-tone=soft] .op307 .op-task,:root[data-patient-tone=soft] .op307 .op-scale-row{--tile-bg:#eeeee8;--tile-ink:#898b7f}

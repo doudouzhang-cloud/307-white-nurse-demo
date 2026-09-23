@@ -1,0 +1,172 @@
+/* Clinical editorial direction: navy ink, cyan accents and open white surfaces. */
+:root{--cb-navy:#144263;--cb-deep:#0d466f;--cb-blue:#1977ba;--cb-cyan:#69adde;--cb-wash:#ebf5fc;--cb-line:#d3e8f7;--cb-muted:#4399d6;--paper:#f3f9fd;--surface:#fff;--ink:#164363;--muted:#4298d6;--line:#d2e8f7;--coral:#2573ab;--coral-dark:#155380;--soft:#ebf5fc;--pt-accent:#2371a8;--pt-accent-dark:#175581;--pt-soft:#ebf5fc;--pt-line:#d3e8f7;--pt-entry:linear-gradient(110deg,#124970,#1d6faa)}
+html,body{background:#e6f2fb;color:var(--cb-navy)}
+.demo-header{padding-top:24px;padding-bottom:21px}.demo-kicker{color:#308ed2;font-size:10px;font-weight:500;letter-spacing:1.5px}.demo-header h1{color:#000;font-size:28px;letter-spacing:.4px}.demo-header h1 span{color:#000}
+.demo-tools button{background:#f8fbfe;border-color:#c9e3f5;color:#2c88ca;border-radius:10px}.demo-tools button.is-active{background:#185078;border-color:#185078;color:white;box-shadow:0 3px 10px #18507812}
+.phone{background:#f5fafd;border-color:#c7e2f5;box-shadow:0 18px 55px #1746680d;border-radius:31px}.screen{color:#184b6f}
+.screen h1,.screen h2,.screen h3{color:var(--cb-navy)}
+.nav-flow-header{background:#e4f1fa;border-color:#d0e7f7;color:#2572a9}.nav-flow-header>small{background:#d5e9f8;color:#3390d2}.demo-nav .nav-flow-panel{border-color:#d0e7f7;background:#fbfdfe;border-radius:17px}.demo-nav .nav-flow-rows button{color:#308ed1;border-bottom-color:#d6eaf8}.demo-nav .nav-flow-rows button em{color:#65abdd}.demo-nav .nav-flow-rows button.is-active{background:#e6f2fa;color:#1c5a87;box-shadow:inset 3px 0 #3b94d4}.demo-nav .nav-flow-rows button:hover{background:#edf6fc}.demo-nav>p{color:#4499d6}.nav-separator{background:#cfe6f6;margin:24px 0 18px}.demo-nav .nav-portal{background:#fff;border-color:#d5e9f8;color:#206190}.demo-nav .nav-portal>em{background:#e6f2fa;color:#287cb8}.demo-nav .nav-portal small{color:#5ca6db}.demo-nav .nav-portal>i{color:#68adde}.demo-nav .nav-portal.is-active{background:#e9f4fb;border-color:#83bfe9}.demo-nav .nav-portal:hover{background:#f4f9fd;border-color:#a5d0ef}
+.guide-card{background:#fff;border:1px solid #d3e8f7;border-radius:18px;box-shadow:0 4px 18px #16446404;padding:25px}.guide-card h2{color:#154161;font-size:24px;line-height:1.5}.guide-card h3{color:#1a5077}.guide-card p{color:#3792d3;line-height:1.9}.guide-card.soft{background:#f2f8fd}.guide-steps{border-color:#d8ebf8}.guide-steps>div>span{background:#e7f3fb;color:#2c88ca}.guide-steps b{color:#1f5f8c}.guide-steps small,.guide-card>small{color:#59a5db}.guide-next{background:#f4f9fd;border-color:#cae4f6;color:#246ea2}.demo-note{color:#5fa8dc;border-color:#dcedf9}
+#home{background:linear-gradient(180deg,#fff 0%,#f1f7fc 52%,#f7fbfe 100%)!important}
+#home .home-alert{background:#ecf5fc;border:1px solid #d5e9f8;box-shadow:none;border-radius:17px}#home .home-alert b{color:#1f5e8b}#home .home-alert small{color:#4f9fd8}#home .home-alert .arrow,#home .home-sun{color:#3490d2}
+#home .home-hello{margin-bottom:19px}#home .home-hello h1{color:#15405e;font-size:24px;font-weight:650;line-height:1.65;letter-spacing:0}#home .home-avatar>span{background:#2a83c2;border-color:white}
+#home .home-today,#home .home-welcome{background:#fff;border:1px solid #d3e8f7;border-radius:22px!important;padding:17px 14px;box-shadow:0 7px 20px #1a507706}
+#home .home-course-head h2{color:#194d73;font-size:16px;line-height:1.7;font-weight:600}
+#home .home-task-surface{background:#eef6fc!important;border-radius:17px;padding:16px 12px}#home .home-task-heading h3{color:#194d73;font-size:17px;font-weight:600}#home .home-task-heading p{color:#55a3da}#home .home-task-icon{background:#dbecf9;color:#297db9}
+#home .home-date{box-shadow:none;border:1px solid #d6eaf8;transform:none}#home .home-date small{background:#2b85c5}#home .home-date b{color:#194d73}
+#home .home-method-voice{background:linear-gradient(110deg,#154c73,#236da2);box-shadow:0 4px 12px #1f608e16;border-radius:14px}#home .home-method-self{background:#fff;color:#1c567f;border-radius:14px;padding:10px}#home .home-method-self .home-method-icon{background:#eaf4fb;color:#3b94d4}#home .home-method-self small{color:#5aa5db}#home .home-method-divider{background:#d7eaf8}
+#home .home-welcome .eyebrow{color:#328fd2}#home .home-welcome p{color:#469ad6}.primary{background:#2472aa;box-shadow:0 4px 12px #2472aa12;color:#fff}.secondary{border-color:#aed5f1;background:#f8fbfe;color:#287ab5}
+#home .home-shortcuts .home-vip{background:#f0f7fc;color:#2573aa;border-color:#c7e2f5;box-shadow:none}#home .home-shortcuts button{background:#fff;border-color:#d3e8f7;color:#2b84c3}#home .home-shortcuts svg{color:#4399d6}
+#home .home-composer{background:#fff;border-color:#d1e7f7;box-shadow:0 4px 15px #184b7005}#home .home-composer button{background:#eaf4fb;color:#2d8bce}#home .home-reset,#home .home-doctor{color:#2c89cb}
+#home .op-home-entry,#special .op-home-entry{border-radius:18px;box-shadow:0 5px 16px #184c7216}.op-home-entry b{letter-spacing:.4px}
+#special,#phoneReady,#mode,#selfTask,#outpatient307{background:#f3f9fd}
+#special .banner{background:#e7f3fb;border-color:#d1e7f7}.banner h2{color:#1b5279}.banner p,.ready-info small{color:#479ad6}.mode-card{background:#fff;border-color:#d3e8f7;box-shadow:0 3px 15px #17466705}.mode-card b{color:#17486b}.mode-card p{color:#479bd7}.mode-icon{background:#e3f0fa;color:#2b83c2}.mode-card.selected{border-color:#54a2da;background:#f3f9fd}.mode-card em{background:#ebf4fb;color:#3490d2}.mode-note{background:#eaf4fb!important;border-color:#d3e8f7!important}.ready-hero h1{color:#154465}.ready-tag{background:#e8f3fb;color:#2c88c9}.ready-info{background:#fff!important;border-color:#d3e8f7!important}.task-card{background:#fff!important;border-color:#d3e8f7!important}.task-title b{color:#1c557e}
+.op307 .op-head{border-bottom:1px solid #d5e9f8;padding-bottom:17px;margin-bottom:9px}.op307 .op-head h1{color:#154160;font-size:22px;line-height:1.5}.op307 .op-head small{color:#5ca6db}.op307 .op-brand{background:#e4f1fa;color:#3390d2;border-radius:10px;padding:9px 8px;font-size:11px}
+.op307 .op-tabs{margin-bottom:22px;border-color:#d7eaf8}.op307 .op-tabs button{font-size:13px;padding:13px 8px;color:#58a4da}.op307 .op-tabs button.active{color:var(--pt-accent);border-color:var(--pt-accent)}
+.op307 .op-hero,.op307 .op-hero.small{background:linear-gradient(120deg,#e3f0fa,#f1f7fc);border:1px solid #d6eaf8;border-radius:20px;padding:24px 21px;box-shadow:none}
+.op307 .op-hero>span{font-size:9px;color:#4197d5;letter-spacing:1.8px}.op307 .op-hero h2{color:#16486b;font-size:25px;font-weight:650;line-height:1.5;margin:10px 0 13px;letter-spacing:0}.op307 .op-hero h2:after{content:'';display:block;width:43px;height:4px;margin-top:12px;border-radius:8px;background:#6eb0df}.op307 .op-hero p{color:#3f96d5;font-size:13px;line-height:1.9}.op307 .op-hero>div{border-color:#cae4f6;color:#4b9dd8}.op307 .op-hero strong{font-size:29px;color:var(--pt-accent);font-weight:600}
+.op307 .op-section-head h2,.op307 .op-section-title{color:#194e74;font-size:17px;letter-spacing:.2px}.op307 .op-section-head h2{border-left:3px solid #66abdd;padding-left:10px}.op307 .op-section-caption{color:#5da7dc;font-size:10px}
+.op307 .op-card,.op307 .op-task,.op307 .op-plan-fold,.op307 .op-settings,.op307 .op-rules{border-color:#d5e9f8;background:#fff;box-shadow:none}.op307 .op-task{padding:18px 15px;border-radius:18px}.op307 .op-task b,.op307 .op-scale-row b{color:#1a4f74}.op307 .op-task p{color:#58a4da}.op307 .op-fold-copy b{color:#1e5e8b}.op307 .op-fold-copy small{color:#5aa5db}.op307 .op-fold-symbol{background:#e6f2fb;color:#3d96d5;border-color:#d5e9f8}.op307 .op-fold-content{background:#f5fafd}.op307 .op-fold-status{border-color:#d8ebf8}.op307 .op-fold-hint{background:#fff;color:#479ad6}.op307 .op-fold-note{color:#54a2da}.op307 .op-datebar{color:#61a9dc}.op307 .op-datebar b{color:#2c87c8}
+.op307 .op-card>h3,.op307 .op-card .op-between h3{color:#206190}.op307 .op-scale-row{border-color:#deeef9;border-radius:16px;box-shadow:none}.op307 .op-record{border-color:#d8ebf8}.op307 .op-record b{color:#1f5e8b}.op307 .op-question legend{color:#1f5e8b}.op307 .op-question{border-color:#d7eaf8}.op307 .op-options input:focus-visible+span{outline-color:#7dbbe8}.op307 .op-result-row{border-color:#d8ebf8}.op307 .op-result-row b{color:#2c86c7}
+#workbench{background:#f0f7fc;--coral:#236ea4;--ink:#1a4f74}
+#workbench .dx-top h1{color:#154160;font-weight:650}#workbench .dx-top small{color:#509fd8}
+#workbench .dx-hero{background:linear-gradient(120deg,#10466c,#1c669b);box-shadow:0 8px 20px #134a7212;border-radius:21px;padding:23px 19px}#workbench .dx-hero h2{color:#fff}#workbench .dx-hero-total b{font-size:42px}#workbench .dx-avatar{background:#ffffff19;border-color:#ffffff35}
+#workbench .dx-stats button{border-color:#d4e8f7;border-radius:15px}#workbench .dx-stats b{color:#1c5782}#workbench .dx-stats b.warm{color:#bc8c4e}
+#workbench .dx-section h2{border-left:3px solid #6bafdf;padding-left:9px;color:#194d72}#workbench .dx-team-list,#workbench .dx-task,#workbench .dx-info,#workbench .dx-patient{border-color:#d3e8f7;box-shadow:none;border-radius:17px}
+#workbench .dx-mini-avatar{background:#e6f2fa;color:#3f96d5}#workbench .dx-task>i{background:#e6f2fa;color:#2d8acc}#workbench .dx-task>i.warm{background:#f5efe1;color:#b39761}
+#workbench .dx-tools button{border-color:#d7eaf8;background:#fff}#workbench .dx-nav{border-color:#d4e8f7}#workbench .dx-nav button.active{color:#1c6aa1}
+#workbench .wbv2-wide{background:#236ea4;border-color:#236ea4;box-shadow:none}#workbench .dx-filter button.active,#workbench .dx-role.active{background:#e6f2fb;border-color:#9ccbed;color:#2572a9}#workbench .dx-record-entry{background:#ebf5fc;color:#2d8bcf}#workbench .dx-chat-pill{background:#ebf5fc;color:#2675ad}
+#workbench .wbv2-risk-hero,#workbench .wbv2-log-hero{background:#e7f3fb;border-color:#cfe6f7;color:#1d5a85}
+/* Muted preference remains a genuine alternative to blue emphasis. */
+:root[data-patient-tone=soft]{--pt-accent:#807e71;--pt-accent-dark:#65665d;--pt-soft:#f0f1ea;--pt-line:#e2e4db;--pt-entry:linear-gradient(115deg,#f3f3ed,#edeee7)}
+:root[data-patient-tone=soft] .op307 .op-hero{background:linear-gradient(120deg,#f0f2eb,#f8f8f3);border-color:#e0e5da}:root[data-patient-tone=soft] .op307 .op-hero h2{color:#566357}:root[data-patient-tone=soft] .op307 .op-hero h2:after{background:#b9c5ad}:root[data-patient-tone=soft] .op307 .op-hero p{color:#8a9486}
+:root[data-patient-tone=soft] .op307 .op-fold-symbol,:root[data-patient-tone=soft] .op307 .op-brand{background:#eeefe7;color:#8c9482;border-color:#e1e5d9}
+@media(max-width:600px){.demo-header h1{font-size:19px}.demo-header{padding:10px 10px 10px 14px}.phone{border-radius:24px 24px 0 0}.op307 .op-hero h2{font-size:24px}.demo-tools button{font-size:9px}.demo-kicker{font-size:8px;letter-spacing:.4px}}
+
+/* Finish shared controls and the call preparation surface. */
+#home .home-doctor,#home .iconbtn{background:#fff;border-color:#d3e8f7;color:#2c88ca}#home .home-method-self i{color:#58a4da}.demo-nav>button.is-active{background:#e6f2fa;border-color:#b1d6f1;color:#22699c}.demo-nav>button em{color:#5aa5db}.demo-nav>button:hover{background:#f1f8fd}.ready-portrait{background:#e3f0fa;box-shadow:0 0 0 10px #eef6fc}.ready-portrait span{background:#2a83c2;border-color:#f4f9fd}.ready-hero p,.ready-foot{color:#489bd7}.quick-finish307{background:#f1f7fc;border-color:#b4d8f2;color:#2777b0}.quick-finish307 small{color:#4b9dd7}button:focus-visible{outline-color:#63aadd}
+
+/* Warm blush canvas, with blue and white action surfaces. */
+html,body{background:#f5eeeb}
+.phone{background:#fcf5f1;border-color:#e8ddd6;box-shadow:0 18px 55px #8c66570d}
+#home{background:radial-gradient(ellipse at 90% 45%,#f9e7df80,transparent 68%),linear-gradient(180deg,#fffaf7 0%,#f9eee8 55%,#fff9f5 100%)!important}
+#special,#phoneReady,#mode,#selfTask,#outpatient307{background:#fcf6f2}
+#home .home-today,#home .home-welcome{border-color:#e9e3de;box-shadow:0 7px 20px #88695406}
+.guide-card{border-color:#e5dfdc}.demo-nav .nav-flow-panel{border-color:#e5dfdc}.demo-nav .nav-portal{border-color:#e6dfdb}
+#workbench{background:#faf5f2}
+
+/* Warm editorial surround: keep clinical blue within the demo itself. */
+.demo-nav .nav-flow-panel{background:#fffcf8;border-color:#e5d8cc}
+.nav-flow-header{background:#f1ebe5;border-color:#e5d8cc;color:#795e49}.nav-flow-header>small{background:#eee1d5;color:#9d775c}
+.demo-nav .nav-flow-rows button{color:#806e60;border-bottom-color:#eaded4}.demo-nav .nav-flow-rows button em{color:#b58b70}.demo-nav .nav-flow-rows button.is-active{background:#fbefe4;color:#77543e;box-shadow:inset 3px 0 #ce9975}.demo-nav .nav-flow-rows button:hover{background:#faf2ea}
+.demo-nav>p,.demo-nav>small{color:#a08b7a}.nav-separator{background:#e4d9cf}
+.demo-nav .nav-portal{background:#fffcf8;border-color:#e6d9ce;color:#5d4c40}.demo-nav .nav-portal>em{background:#f8e9dd;color:#b66c48}.demo-nav .nav-portal small{color:#a28c79}.demo-nav .nav-portal>i{color:#b29c89}.demo-nav .nav-portal:hover{background:#fff7ed;border-color:#d5bda9}.demo-nav .nav-portal.is-active{background:#fff2e8;border-color:#dfb08d;color:#674d3b}.demo-nav .nav-portal.is-active>em{background:#f8e9dd;color:#b66c48}.demo-nav .nav-portal.doctor>em{background:#e6f4fe;color:#3396dc}.demo-nav .nav-portal.doctor.is-active{background:#eff8ff;border-color:#a4d0ef}
+.demo-nav>button{color:#806e60}.demo-nav>button em{color:#b58b70}.demo-nav>button.is-active{background:#fff2e8;border-color:#dfb08d;color:#77543e}.demo-nav>button:hover{background:#faf2ea}
+.demo-guide .guide-card{background:#fffdfa;border-color:#e7d8ca;box-shadow:none;border-radius:17px;padding:23px 24px}.demo-guide .guide-card h2{color:#514438;font-size:22px;line-height:1.5;margin:10px 0 16px}.demo-guide .guide-card h3{color:#71543f}.demo-guide .guide-card p{color:#806f60;line-height:1.9}.demo-guide .guide-card>small{color:#a8876e}.demo-guide .guide-card.soft{background:#faf6f0}.demo-guide .guide-steps{border-color:#eadfd5}.demo-guide .guide-steps>div>span{background:#f5e9dd;color:#a87550}.demo-guide .guide-steps b{color:#695340}.demo-guide .guide-steps small{color:#a18c79}.demo-guide .guide-next{background:#fffdfa;border-color:#e5d1bf;color:#b06c43;border-radius:10px}.demo-guide .guide-next:hover{background:#fff5ec;border-color:#d4b49c}.demo-guide .demo-note{color:#a18e7c;border-color:#eadfd5}.demo-guide .tone-card h3{color:#69513f}.demo-guide .tone-toggle{color:#8d7662}
+
+/* Reference palette: ocean blue, navy type, translucent sky-blue panels. */
+:root{--cb-navy:#103f60;--cb-deep:#074b7b;--cb-blue:#056db8;--cb-cyan:#79b6e1;--pt-accent:#0869af;--pt-accent-dark:#074b7b;--pt-soft:#edf6fd;--pt-line:#d3e8f7;--pt-entry:#074b7b}
+#home .home-method-voice{background:linear-gradient(105deg,#074b7b,#086bb2);box-shadow:0 4px 12px #074b7b12}#home .op-home-entry,#special .op-home-entry{background:var(--pt-entry);box-shadow:none}
+#home .home-hello h1{color:#094067}#home .home-task-surface{background:#eef6fc!important}#home .home-task-heading h3,#home .home-method-self{color:#13466a}#home .home-task-icon,#home .home-method-self .home-method-icon{background:#dceefb;color:#1673b5}
+.op307 .op-hero,.op307 .op-hero.small{background:linear-gradient(105deg,#e7f4fd,#f6fbfe);border-color:#daecf9}.op307 .op-hero h2{color:#0a4066;font-weight:700}.op307 .op-hero h2:after{background:#79b6e1;width:58px}.op307 .op-head h1,.op307 .op-section-head h2{color:#103f60}.op307 .op-hero p{color:#2c86c7}
+.op307 .op-task .op-task-day{flex:0 0 48px;width:48px;height:48px;min-height:48px;border-radius:50%;padding:11px;background:#e2f1fb;color:#1372b5;align-items:center}.op307 .op-task-day svg,.op307 .op-fold-symbol svg{width:26px;height:26px;display:block}.op307 .op-task[data-task-kind=scale] .op-task-day{background:#eaf4fc;color:#3993d3}.op307 .op-task[data-task-kind=care] .op-task-day,.op307 .op-task[data-task-kind=video] .op-task-day{background:#e0eff9;color:#287cb8}.op307 .op-task-timing{display:block;font-size:11px;color:#3993d4;margin-top:4px;line-height:1.6}.op307 .op-task b{color:#164465}.op307 .op-task{align-items:center}.op307 .op-fold-symbol{border-radius:50%;background:#e2f1fb;color:#1372b5;border:0;width:44px;height:44px}.op307 .op-fold-copy b{color:#164465}
+#workbench .dx-hero{background:linear-gradient(115deg,#074b7b,#086bb2)}
+:root[data-patient-tone=soft] .op307 .op-task .op-task-day,:root[data-patient-tone=soft] .op307 .op-fold-symbol{background:#eeeee8;color:#898b7f}
+
+/* Stronger, denser workflow navigation. */
+.nav-flow-header{padding:12px 11px;color:#604735}.nav-flow-header>span{font-size:14px;font-weight:650}.nav-flow-header>small{color:#87644b;font-weight:500}
+.nav-flow-rows{padding:4px 10px 5px}.demo-nav .nav-flow-rows button{min-height:49px;padding:11px 2px;font-size:13px;font-weight:550;line-height:1.6;color:#604d3e;border-bottom-color:#e3d2c3}.demo-nav .nav-flow-rows button em{color:#a26f4c;font-size:11px;font-weight:550}.demo-nav .nav-flow-rows button.is-active{color:#70472b;font-weight:650}.demo-nav .nav-flow-rows button i{color:#a48b77;opacity:.65;font-size:16px}.demo-nav .nav-flow-rows button:hover i,.demo-nav .nav-flow-rows button.is-active i{opacity:1}
+@media(min-width:601px) and (max-width:900px){.demo-nav .nav-flow-rows button{font-size:12px;gap:5px}.nav-flow-header>span{font-size:13px}.demo-nav .nav-flow-rows button em{font-size:10px}}
+
+/* Daily reminder blends into the warm home canvas. */
+#home .home-alert{background:linear-gradient(110deg,#fff7ee,#f8ece3);border-color:#ecdccd;box-shadow:none}
+#home .home-alert b{color:#745640}#home .home-alert small{color:#a18b76}#home .home-alert .arrow{color:#b49273}#home .home-sun{color:#ba9564}
+
+/* Illustrated entry points, matching the medical educational artwork. */
+.op307 .op-task .op-task-day{flex-basis:66px;width:66px;height:66px;min-height:66px;padding:0;background:transparent!important;border-radius:50%;overflow:hidden}.op307 .op-medical-art{display:block;width:100%;height:100%;object-fit:contain}.op307 .op-fold-symbol{flex:0 0 54px;width:54px;height:54px;background:transparent!important;overflow:hidden}.op307 .op-task{gap:12px}.op307 .op-task>div:nth-child(2){min-width:0;flex:1}
+
+.op307 .op-plan-fold>summary{grid-template-columns:54px minmax(0,1fr) 18px;column-gap:12px}
+
+/* Overview shares the calm white task-card surface. */
+.op307 .op-hero,.op307 .op-hero.small,:root[data-patient-tone=soft] .op307 .op-hero{background:#fff;border:1px solid #d3e8f7;box-shadow:none}
+.op307 .op-hero h2{color:#164465}.op307 .op-hero>span{color:#57a3da}.op307 .op-hero p{color:#3993d4}.op307 .op-hero strong{color:#1d5984}.op307 .op-hero>div{border-color:#ddedf9}.op307 .op-hero h2:after{background:#a9d2f0;height:3px}
+
+#home .home-avatar>span{background:#f0dccd;color:#88664d;border-color:#fff8f3}
+
+/* Readable task details and a clearly visible schedule toggle. */
+.op307 .op-task-timing{color:#2779b3;font-size:12px;font-weight:500;line-height:1.7}
+.op307 .op-task p{color:#2a83c2;font-size:12px;line-height:1.7;margin:5px 0 8px}
+.op307 .op-task .op-chip{font-size:11px;font-weight:500}.op307 .op-task .op-chip.attention{background:#f7efdd;color:#886b2c}.op307 .op-task .op-chip.normal{background:#eaf2eb;color:#4f7856}
+.op307 .op-fold-copy small{color:#297db9;font-size:12px;line-height:1.65}
+.op307 .op-plan-fold>summary{position:relative;grid-template-columns:54px minmax(0,1fr) 86px;gap:15px 12px}
+.op307 .op-fold-copy{grid-column:2/4;padding-right:18px}.op307 .op-fold-chevron{position:absolute;right:22px;top:40px;border-color:#2d8bcf}
+.op307 .op-fold-status{grid-column:1/3;color:#91642e;font-size:12px;font-weight:500;gap:4px 10px;flex-wrap:wrap;align-self:stretch;padding-top:12px}
+.op307 .op-fold-status>span{color:#2a82c1;font-size:11px;font-weight:400}
+.op307 .op-fold-hint{grid-column:3;align-self:end;justify-self:stretch;display:block;text-align:center;background:#e9f4fb;color:#1e5c89;border:1px solid #c0def4;border-radius:8px;font-size:12px;font-weight:600;line-height:1.5;padding:9px 7px;min-height:38px;box-sizing:border-box}
+.op307 .op-plan-fold>summary:hover .op-fold-hint{background:#dbecf9;border-color:#85c0ea}.op307 .op-fold-note{color:#2b85c5;font-size:12px}
+
+/* Bright medical-blue trial; prior CSS archived in work/before-bright-blue.zip. */
+:root{--pt-accent:#0875bc;--pt-accent-dark:#075d9c;--pt-entry:#0875bc;--cb-blue:#0875bc;--cb-deep:#0875bc;--coral:#0875bc;--coral-dark:#075d9c}
+#home .home-method-voice,#workbench .dx-hero{background:linear-gradient(110deg,#0869ad,#087bc4)}.demo-tools button.is-active,.primary,#workbench .wbv2-wide{background:#0875bc;border-color:#0875bc}
+.team-box .team-badge{width:54px;height:54px;flex:0 0 54px;background:transparent;padding:0;border-radius:50%;overflow:hidden}.team-badge img{width:100%;height:100%;object-fit:contain;display:block}.team-box b{color:#155488}
+
+/* Warm patient companion page and dark, readable greeting. */
+#home .home-hello h1{color:#292725}
+#special{--coral:#b27d59;--coral-dark:#865a3c;--soft:#f7e9df;--line:#eadbd0;--ink:#292725;--muted:#8c7766;background:#fcf6f2;color:#292725}
+#special h1,#special h2,#special h3,#special .mode-switch b,#special .timeline-title b,#special .task-title b{color:#292725}
+#special .banner{background:linear-gradient(110deg,#fff7ee,#f8ece3);border-color:#ecdccd;box-shadow:0 5px 18px #8c665706}
+#special .banner p,#special .backline small,#special .mode-switch small,#special .timeline-title small{color:#8a7563}
+#special .eyebrow{background:#f3e3d6;color:#78573f}#special .banner-audio{color:#9e7859}
+#special .iconbtn{background:#fffaf6;border-color:#eadbd0;color:#574a40}#special .mode-switch{background:#fffdfa;border-color:#eadbd0}
+#special .secondary,#special .smallbtn{background:#fffaf6;border-color:#dec8b8;color:#805b41}
+#special .dayline .day{color:#805b41;border-color:#eadbd0}#special .dayline .day.today{background:#b27d59;color:#fff}#special .day-medal>span{color:#805b41}#special .day-medal svg{stroke:#b27d59}
+#special .task-card{border-color:#eadbd0!important}#special .task-card p{color:#73665c}
+
+.demo-header .demo-kicker{color:#000}
+
+/* Home toolbar: neutral black labels and icons. */
+#home .home-topbar #menu,#home .home-topbar #resetDemo,#home .home-topbar #homeDoctor,#home .home-topbar #homeAudio{color:#000}
+#home .home-topbar #homeDoctor{border-color:#ded8d3}
+
+/* Readable context label on the guide card. */
+#guideTag{font-size:14px;font-weight:600;line-height:1.6;letter-spacing:.5px;color:#28668f}
+
+/* Shared outpatient navigation: identical layout across all five views. */
+#outpatient307.op307 .op-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin:0 0 22px;border-bottom:1px solid #dce6f4}
+#outpatient307.op307 .op-tabs button{display:flex;align-items:center;justify-content:center;min-width:0;min-height:48px;padding:12px 4px;border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;color:#718198;font-size:14px;font-weight:500;line-height:22px;white-space:nowrap}
+#outpatient307.op307 .op-tabs button.active{color:#2d76d7;border-bottom-color:#2d76d7;font-weight:700}
+#outpatient307.op307 .op-tabs button:focus-visible{outline:2px solid #2d76d7;outline-offset:-3px}
+
+/* Assessment entry icons match the blue-and-white outpatient cards. */
+#outpatient307 .op-scale-row .op-scale-icon{background:#eaf3ff;color:#3478c7;flex-basis:48px;width:48px;height:48px;border-radius:14px;overflow:hidden}
+#outpatient307 .op-scale-icon .op-medical-art{display:block;width:48px;height:48px;object-fit:contain}
+
+.op-home-entry .op-home-icon{width:46px;height:46px;flex:0 0 46px;padding:0;border-radius:13px;overflow:hidden;background:#fff}.op-home-entry .op-home-icon img{display:block;width:100%;height:100%;object-fit:contain}
+
+/* Completed follow-up: stronger text contrast and a clear summary action. */
+#home .home-finished{color:#28644f;font-size:15px;font-weight:600;line-height:1.6;padding:16px 8px}
+#home .home-finished svg{color:#28765b;stroke-width:2.2;flex-shrink:0}
+#home .home-summary-button{background:#fff;border:1px solid #c6dcef;color:#173f60;font-size:16px;font-weight:650;line-height:1.5;min-height:54px;padding:14px 16px}
+#home .home-summary-button>span{color:#286a9a;font-size:24px;font-weight:600}
+#home .home-summary-button:hover{background:#f7fbff;border-color:#91badb}
+#home .home-summary-button:focus-visible{outline:2px solid #2875b0;outline-offset:3px}
+
+/* Identity headings, helper copy and entered patient name. */
+#verify .backHome,#verify .form-head h1,#verify .form-head p,#verify input,#verify select,#verify .field label,#verify .seg button,#drawerLayer .profile b{color:#000}
+
+/* Keep the patient drawer in the original repository palette. */
+#drawerLayer{--paper:#f5f0e8;--surface:#faf7f2;--ink:#2c2c2a;--muted:#888780;--line:#e8e3d9;--coral:#cc5c3a;--coral-dark:#c84828;--soft:#f8e3dc;color:var(--ink)}
+#drawerLayer .drawer{background:var(--surface)}
+#drawerLayer .drawer-header h2{color:var(--coral)}
+#drawerLayer .iconbtn{background:var(--surface);color:var(--ink);border-color:var(--line)}
+#drawerLayer .drawer-grid button,#drawerLayer .drawer-list,#drawerLayer .drawer-row{background:#fffdfb;border-color:var(--line);color:var(--ink)}
+#drawerLayer .profile small,#drawerLayer .drawer-grid small,#drawerLayer .drawer-row small{color:var(--muted)}
+#drawerLayer .row-mark{background:#fff0e9;color:var(--coral)}
+#drawerLayer .vip-tag{background:var(--coral);color:#fff}
+
+/* Onboarding and summary headers: black text as requested. */
+#consent #backVerify,#scheme #backConsent,#mode #backScheme,
+#consent .form-head h1,#consent .form-head p,
+#scheme .form-head h1,#scheme .form-head p,
+#mode .form-head h1,#mode .form-head p,#mode .form-head .eyebrow,
+#summaryLayer #summaryTag,#summaryLayer #summaryTitle,#summaryLayer #summaryDesc{color:#000}
