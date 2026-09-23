@@ -33,7 +33,7 @@ function render(){
  });
  host.querySelectorAll('.wn-today footer [data-wn]').forEach(button=>button.onclick=()=>button.dataset.wn==='alerts'?OP.openAlertsFromTimeline():OP.openFromTimeline(button.dataset.wn));
 }
-window.WhiteNurseTimeline={render};
+window.WhiteNurseTimeline={render,open:()=>{window.Project307.navigate('special');const pane=document.getElementById('special');const y=host.getBoundingClientRect().top-pane.getBoundingClientRect().top+pane.scrollTop-12;pane.scrollTo({top:Math.max(0,y),behavior:'auto'})}};
 window.addEventListener('outpatient307-change',()=>{if(document.getElementById('special')?.classList.contains('active'))render()});
 render();
 })();

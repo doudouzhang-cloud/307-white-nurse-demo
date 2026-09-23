@@ -86,11 +86,12 @@ async function action(op,value,task){if(op==='patient-contact'){contactTeam(valu
  if(op==='scale-open'){rememberPage();scaleOpen(value,task);return}if(op==='scale-sample'){sampleScale(value);return}if(op==='scale-result'){rememberPage();scaleResult(value);return}if(op==='filter'){filter=value;render();return}if(op==='contact'){const a=s.alerts.find(x=>x.id===value);a.state='contacted';a.history.push({time:stamp(),text:'团队已联系患者（演示）'});persist();render();return}if(op==='source'){rememberPage();const a=s.alerts.find(x=>x.id===value);a.source==='report'?reportDetail(a.sourceId):scaleResult(a.sourceId);return}
  if(op==='download-report'){reportDownload(value);return}if(op==='export-csv'){exportCSV();return}if(op==='export-json'){download('307项目-院外随访数据.json',JSON.stringify({project:'307项目',patient:'307-001（演示）',exported:new Date().toISOString(),...s},null,2),'application/json');return}if(op==='export-alerts'){download('307项目-预警记录.csv',E.csv([['预警ID','来源','标题','等级','状态','生成时间','内容','处理记录'],...s.alerts.map(a=>[a.id,a.source,a.title,a.level,a.state,a.created,a.body,JSON.stringify(a.history)])]),'text/csv;charset=utf-8');return}}
 function inject(){
- const entry='<button class="op-home-entry" type="button"><span class="op-home-icon"><img src="assets/medical-illustrations/care-plan.png" alt="" aria-hidden="true"></span><span><b>今日院外照护</b><small data-op-home-copy>复查 · 量表评估 · 导管维护</small></span><i>›</i></button>';
- $('#home .home-bottom').insertAdjacentHTML('beforebegin',entry);
- $('#home .op-home-entry').onclick=()=>window.Project307.navigate('special');
  $('#homeReport').onclick=$('#homeCamera').onclick=()=>open('reports');
- $('#homeCalendar').onclick=()=>open('plan');
+ $('#homeCalendar').onclick=()=>window.WhiteNurseTimeline?.open();
+ const drawerLinks=document.querySelectorAll('.drawer-grid button');
+ const closeDrawer=()=>{const layer=document.querySelector('#drawerLayer');layer?.classList.remove('show');layer?.setAttribute('aria-hidden','true')};
+ if(drawerLinks[0])drawerLinks[0].onclick=()=>{closeDrawer();open('reports')};
+ if(drawerLinks[1])drawerLinks[1].onclick=()=>{closeDrawer();window.WhiteNurseTimeline?.open()};
 }
 
 window.Outpatient307={open,openFromTimeline:view=>{open(view);patientReturn='special'},openAlertsFromTimeline:()=>{open('plan');patientReturn='special';tab='doctor';render()},openTaskFromTimeline:id=>{open('plan');patientReturn='special';action('task',id)},snapshot:()=>({now:now(),config:{...s.config},tasks:E.plan(s.config).map(t=>({...t,done:taskDone(t)})),alerts:s.alerts.filter(a=>a.state!=='closed').map(a=>({...a}))}),openTask:id=>{open('plan');action('task',id)},reset:()=>{backStack.length=0;s=fresh();persist();sync();render()},render,refresh:()=>{sync();if(root.classList.contains('active'))render()}};
