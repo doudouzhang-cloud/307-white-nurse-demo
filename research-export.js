@@ -31,13 +31,31 @@ function rows(state,score){
 }
 const xml=s=>String(s).replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]));
 function column(n){let s='';for(;n;n=Math.floor((n-1)/26))s=String.fromCharCode(65+(n-1)%26)+s;return s}
-function sheetXml(rows){const end=column(Math.max(1,...rows.map(row=>row.length)))+Math.max(1,rows.length);let out='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><dimension ref="A1:'+end+'"/><sheetData>';
- rows.forEach((row,ri)=>{let cells='';row.forEach((value,ci)=>{if(value===null||value===undefined||value==='')return;const ref=column(ci+1)+(ri+1);if(typeof value==='number'&&Number.isFinite(value))cells+=`<c r="${ref}"><v>${value}</v></c>`;else if(typeof value==='string'&&value.startsWith('='))cells+=`<c r="${ref}"><f>${xml(value.slice(1))}</f></c>`;else cells+=`<c r="${ref}" t="inlineStr"><is><t>${xml(value)}</t></is></c>`});if(cells)out+=`<row r="${ri+1}">${cells}</row>`});return out+'</sheetData></worksheet>'}
+function filledTemplateSheet(source,data){
+ const start=source.indexOf('<row r="4"'),end=source.indexOf('</sheetData>',start);
+ if(start<0||end<0)throw new Error('量表导出模板的数据区域无法识别');
+ const originalRow=source.slice(start,source.indexOf('</row>',start)+6);
+ const styles=new Map([...originalRow.matchAll(/<c r="([A-Z]+)4" s="(\d+)"/g)].map(([,col,style])=>[col,style]));
+ const render=(values,rowNumber)=>`<row r="${rowNumber}">${values.map((value,i)=>{
+  const col=column(i+1),ref=col+rowNumber,style=styles.get(col),attr=`r="${ref}"${style?` s="${style}"`:''}`;
+  if(value===null||value===undefined||value==='')return `<c ${attr}/>`;
+  if(typeof value==='number'&&Number.isFinite(value))return `<c ${attr}><v>${value}</v></c>`;
+  return `<c ${attr} t="inlineStr"><is><t>${xml(value)}</t></is></c>`;
+ }).join('')}</row>`;
+ const blank=Array(T.headers[0].length).fill(''),dataRows=data.length?data:[blank];
+ const replacement=render(blank,4)+dataRows.map((row,i)=>render(row,i+5)).join('');
+ return (source.slice(0,start)+replacement+source.slice(end)).replace(/<dimension ref="[^"]+"\/>/,`<dimension ref="A1:IR${Math.max(5,4+data.length)}"/>`);
+}
 const utf=s=>new TextEncoder().encode(s);
 const u16=(view,p,n)=>view.setUint16(p,n,true),u32=(view,p,n)=>view.setUint32(p,n>>>0,true);
 const crcTable=Array.from({length:256},(_,i)=>{let n=i;for(let j=0;j<8;j++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0});
 function crc(bytes){let n=0xffffffff;for(const b of bytes)n=crcTable[(n^b)&255]^(n>>>8);return(n^0xffffffff)>>>0}
 function zip(files){const chunks=[],central=[];let offset=0;for(const [path,contents] of files){const name=utf(path),body=utf(contents),checksum=crc(body),head=new Uint8Array(30+name.length),v=new DataView(head.buffer);u32(v,0,0x04034b50);u16(v,4,20);u16(v,6,2048);u32(v,14,checksum);u32(v,18,body.length);u32(v,22,body.length);u16(v,26,name.length);head.set(name,30);chunks.push(head,body);const c=new Uint8Array(46+name.length),cv=new DataView(c.buffer);u32(cv,0,0x02014b50);u16(cv,4,20);u16(cv,6,20);u16(cv,8,2048);u32(cv,16,checksum);u32(cv,20,body.length);u32(cv,24,body.length);u16(cv,28,name.length);u32(cv,42,offset);c.set(name,46);central.push(c);offset+=head.length+body.length}const centralSize=central.reduce((n,c)=>n+c.length,0),end=new Uint8Array(22),v=new DataView(end.buffer);u32(v,0,0x06054b50);u16(v,8,files.length);u16(v,10,files.length);u32(v,12,centralSize);u32(v,16,offset);return new Blob([...chunks,...central,end],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})}
-function workbook(state,score){const first=[...T.headers,[],...rows(state,score)],sheets=[first,T.codebook,T.quality];const names=['1_数据导出模板','2_变量编码手册','4_数据质量核查'];const files=[['[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>'+sheets.map((_,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')+'</Types>'],['_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],['xl/workbook.xml','<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets>'+names.map((name,i)=>`<sheet name="${xml(name)}" sheetId="${i+1}" r:id="rId${i+1}"/>`).join('')+'</sheets><calcPr fullCalcOnLoad="1"/></workbook>'],['xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'+sheets.map((_,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')+'</Relationships>']];sheets.forEach((sheet,i)=>files.push([`xl/worksheets/sheet${i+1}.xml`,sheetXml(sheet)]));return zip(files)}
+function workbook(state,score){
+ const packageParts=root.Research307TemplatePackage?.parts;
+ if(!packageParts)throw new Error('量表导出模板未加载');
+ const data=rows(state,score);
+ return zip(packageParts.map(([path,contents])=>[path,path==='xl/worksheets/sheet1.xml'?filledTemplateSheet(contents,data):contents]));
+}
 const api={rows,workbook};root.Research307Export=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

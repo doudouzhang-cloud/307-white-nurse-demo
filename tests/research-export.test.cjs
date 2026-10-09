@@ -1,5 +1,6 @@
 const assert=require('node:assert/strict');
 require('../research-template.js');
+require('../research-template-package.js');
 const E=require('../outpatient-engine.js');
 const X=require('../research-export.js');
 const keys=globalThis.Research307Template.headers[0];
@@ -19,5 +20,10 @@ assert.equal(at('TFI_1'),0);
 assert.equal(at('TFI_total'),0);
 X.workbook(state,E.score).arrayBuffer().then(buffer=>{
  assert.equal(new DataView(buffer).getUint32(0,true),0x04034b50);
- console.log('Passed research template column, scale coding, and XLSX container checks.');
+ const contents=new TextDecoder().decode(buffer);
+ assert.match(contents,/<styleSheet /);
+ assert.match(contents,/<c r="A1" s="1"/);
+ assert.match(contents,/<c r="A5" s="21" t="inlineStr"/);
+ assert.doesNotMatch(contents.slice(contents.indexOf('<worksheet'),contents.indexOf('</worksheet>')+12),/BC001/);
+ console.log('Passed research template column, scale coding, and XLSX style checks.');
 });
