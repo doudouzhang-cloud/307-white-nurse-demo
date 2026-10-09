@@ -539,7 +539,7 @@
   window.addEventListener('tang-tts-status',e=>{if(!flow||flow.paused||camera)return;if(e.detail.state==='playing'){phase('助手正在说话…');$('#voiceLayer').dataset.phase='speaking'}else if(e.detail.state==='error'){phase('语音播报暂不可用');$('#voiceQuestion').hidden=false}});
 
   // 307: isolated project state, separate entry routes and explicit demo completion.
-  const guide307={outpatient307:['院外照护日历','复查节点自动生成待办；报告预审、六量表评估与导管维护联动医生端预警。'],home:['助手首页','从今天的健康提醒开始，选择适合自己的随访方式。'],mode:['选择随访方式','AI 电话与自主填报分别进入不同页面，可以随时切换。'],phoneReady:['AI 电话随访','先查看通话说明，再开始与护士长 AI 助手交流。也可以改为自主填报。'],selfTask:['自主健康填报','直接逐项记录身体情况，填写进度自动保存。完成后生成今日健康总结。'],special:['今日任务与院外照护','查看随访进度、补充资料与本次总结，确认后模拟回传团队。'],workbench:['主任工作台','查看演示患者队列、随访记录与团队处理状态。'],care:['护士长陪伴电话','这是独立的陪伴交流，不会替代每日健康填报。']};
+  const guide307={outpatient307:['院外照护日历','复查节点自动生成待办；报告预审、综合量表评估与导管维护联动医生端预警。'],home:['助手首页','从今天的健康提醒开始，选择适合自己的随访方式。'],mode:['选择随访方式','AI 电话与自主填报分别进入不同页面，可以随时切换。'],phoneReady:['AI 电话随访','先查看通话说明，再开始与护士长 AI 助手交流。也可以改为自主填报。'],selfTask:['自主健康填报','直接逐项记录身体情况，填写进度自动保存。完成后生成今日健康总结。'],special:['今日任务与院外照护','查看随访进度、补充资料与本次总结，确认后模拟回传团队。'],workbench:['主任工作台','查看演示患者队列、随访记录与团队处理状态。'],care:['护士长陪伴电话','这是独立的陪伴交流，不会替代每日健康填报。']};
   function updateGuide307(id){const g=guide307[id]||['健康陪伴','沿用原 demo 的完整随访流程，当前数据仅用于演示。'];$('#guideTitle').textContent=g[0];$('#guideCopy').textContent=g[1];$('#guideTag').textContent=id==='workbench'?'暖欣 DX · 医生端':'橙欣 CX · 患者端';$$('[data-nav]').forEach(b=>b.classList.toggle('is-active',b.dataset.nav===id));}
   const showBefore307=show;
   show=function(id){showBefore307(id);updateGuide307(id)};
@@ -572,9 +572,11 @@
 <script src="workbench-v2.js?v=1.31-local"></script>
 <script src="voice-manifest.js?v=033cbe192185"></script>
 <script src="volc-tts-bridge.js?v=1.4"></script>
-<script src="scale-data.js"></script>
-<script src="outpatient-engine.js"></script>
-<script src="outpatient.js?v=1.33-local"></script>
+<script src="scale-data.js?v=1.37"></script>
+<script src="outpatient-engine.js?v=1.37"></script>
+<script src="research-template.js?v=1.37"></script>
+<script src="research-export.js?v=1.37"></script>
+<script src="outpatient.js?v=1.37"></script>
 <script src="patient-theme.js?v=1.7"></script>
 <script src="white-nurse-timeline.js?v=1.36"></script>
 </body>
