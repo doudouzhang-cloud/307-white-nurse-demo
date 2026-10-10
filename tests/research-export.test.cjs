@@ -18,12 +18,16 @@ assert.equal(at('PSQI_compB'),2);
 assert.equal(at('PSQI_compC'),2);
 assert.equal(at('TFI_1'),0);
 assert.equal(at('TFI_total'),0);
-X.workbook(state,E.score).arrayBuffer().then(buffer=>{
+X.workbook(state,E.score).arrayBuffer().then(async buffer=>{
  assert.equal(new DataView(buffer).getUint32(0,true),0x04034b50);
  const contents=new TextDecoder().decode(buffer);
  assert.match(contents,/<styleSheet /);
  assert.match(contents,/<c r="A1" s="1"/);
  assert.match(contents,/<c r="A5" s="21" t="inlineStr"/);
  assert.doesNotMatch(contents.slice(contents.indexOf('<worksheet'),contents.indexOf('</worksheet>')+12),/BC001/);
+ const table=await X.tableWorkbook(['姓名','患者唯一ID'],[['陈女士','307-001']]).arrayBuffer();
+ const tableXml=new TextDecoder().decode(table);
+ assert.match(tableXml,/<c r="A1" s="24" t="inlineStr">/);
+ assert.match(tableXml,/<c r="B2" s="21" t="inlineStr">/);
  console.log('Passed research template column, scale coding, and XLSX style checks.');
 });

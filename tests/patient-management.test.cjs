@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const P=require('../patient-management.js');
+const patients=[{name:'陈女士',id:'307-001',node:'ddEC D6',chemo:{date:'2026-08-13'},report:{uploaded:'是',date:'2026-08-18 09:42'}},{name:'王女士',id:'307-002',node:'ddEC D8',chemo:{date:'2026-08-11'},report:{uploaded:'否',date:'—'}}];
+const metadata=p=>P.metadata(p,{'307-001':{marker:'优先联系',category:'重点关注',tags:'血常规，发热，血常规'}});
+assert.deepEqual(metadata(patients[0]).tags,['血常规','发热']);
+assert.equal(P.matches(patients[0],metadata(patients[0]),'307-001','血常规'),true);
+assert.equal(P.matches(patients[1],metadata(patients[1]),'','发热'),false);
+const rows=P.exportRows([patients[0]],metadata,()=> '张医生','2026-10-10');
+assert.equal(rows.length,1);assert.deepEqual(rows[0].slice(0,5),['陈女士','307-001','优先联系','重点关注','血常规、发热']);
+assert.equal(rows[0][7],'2026-08-13');assert.equal(rows[0][8],'2026-08-18');assert.equal(rows[0][9],'2026-10-10');
+console.log('Passed patient ID, tags, filtering, and export row checks.');

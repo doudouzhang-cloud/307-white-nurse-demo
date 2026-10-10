@@ -7,7 +7,7 @@
   const KEY = 'cx-white-nurse307-v1';
   const DEMO_PATIENTS = [
     {
-      name:'陈女士', id:'P-2026', node:'ddEC 第1周期 D6', note:'体温异常已进入预审', level:'R1', action:'查看风险卡',
+      name:'陈女士', id:'307-001', node:'ddEC 第1周期 D6', note:'体温异常已进入预审', level:'R1', action:'查看风险卡',
       chemo:{received:'是', date:'2026-08-13', cycle:'第1周期', record:'给药记录已同步'},
       report:{uploaded:'是', date:'2026-08-18 09:42', source:'患者拍照上传', values:[['WBC','2.6 ×10⁹/L','偏低'],['ANC','1.4 ×10⁹/L','已提取'],['NEUT%','53.8%','已提取'],['LYM','0.82 ×10⁹/L','已提取'],['LYM%','31.5%','已提取'],['HGB','112 g/L','已提取'],['PLT','176 ×10⁹/L','已提取']]},
       gcsf:{used:'是', date:'2026-08-14 15:20', note:'患者报告已使用长效升白针'},
@@ -15,7 +15,7 @@
       adverse:[['发热','最高 38.8℃','红色预审'],['寒战','轻微发冷，无意识异常','已上报'],['恶心','轻度，可进食饮水','已记录']]
     },
     {
-      name:'王女士', id:'P-2031', node:'ddEC 第2周期 D8', note:'血常规已上传，等待团队复核', level:'R2', action:'查看报告',
+      name:'王女士', id:'307-002', node:'ddEC 第2周期 D8', note:'血常规已上传，等待团队复核', level:'R2', action:'查看报告',
       chemo:{received:'是', date:'2026-08-11', cycle:'第2周期', record:'给药记录已同步'},
       report:{uploaded:'是', date:'2026-08-18 08:56', source:'患者拍照上传', values:[['WBC','3.1 ×10⁹/L','偏低'],['ANC','1.7 ×10⁹/L','已提取'],['NEUT%','55.0%','已提取'],['LYM','0.92 ×10⁹/L','已提取'],['LYM%','29.7%','已提取'],['HGB','106 g/L','已提取'],['PLT','158 ×10⁹/L','已提取']]},
       gcsf:{used:'是', date:'2026-08-12 14:10', note:'患者报告已使用长效升白针'},
@@ -23,7 +23,7 @@
       adverse:[['恶心','2次，无呕吐','已记录'],['乏力','较平时明显，仍能日常活动','团队关注'],['发热/出血','未上报','未命中']]
     },
     {
-      name:'李女士', id:'P-2048', node:'ddEC 第1周期 D5', note:'自主填报连续 2 次未完成，AI 提醒电话待呼出', level:'待确认', action:'查看待办',
+      name:'李女士', id:'307-003', node:'ddEC 第1周期 D5', note:'自主填报连续 2 次未完成，AI 提醒电话待呼出', level:'待确认', action:'查看待办',
       chemo:{received:'是', date:'2026-08-14', cycle:'第1周期', record:'给药记录已同步'},
       report:{uploaded:'否', date:'—', source:'暂无患者上传', values:[]},
       gcsf:{used:'未到节点', date:'—', note:'待确认化疗后再按团队安排记录'},
@@ -31,7 +31,7 @@
       adverse:[['恶心/呕吐','未上报','未采集'],['发热/寒战','未上报','未采集'],['出血表现','未上报','未采集']]
     },
     {
-      name:'赵女士', id:'P-2053', node:'ddEC 第3周期 D10', note:'随访完成，已回传总结', level:'已完成', action:'查看总结',
+      name:'赵女士', id:'307-004', node:'ddEC 第3周期 D10', note:'随访完成，已回传总结', level:'已完成', action:'查看总结',
       chemo:{received:'是', date:'2026-08-09', cycle:'第3周期', record:'给药记录已同步'},
       report:{uploaded:'是', date:'2026-08-18 10:03', source:'患者拍照上传', values:[['WBC','5.8 ×10⁹/L','已提取'],['ANC','3.6 ×10⁹/L','已提取'],['NEUT%','62.1%','已提取'],['LYM','1.38 ×10⁹/L','已提取'],['LYM%','23.8%','已提取'],['HGB','109 g/L','已提取'],['PLT','203 ×10⁹/L','已提取']]},
       gcsf:{used:'是', date:'2026-08-10 13:40', note:'患者报告已使用长效升白针'},
@@ -40,10 +40,10 @@
     }
   ];
   const QUALITY = [
-    {q:'我体温 38.8℃，需要等团队回复吗？', p:'陈女士 · P-2026', a:'先记录体温，建议继续观察。', s:'需优化', key:'应识别为红色风险；完成全部采集后提示及时挂号就诊，并推送团队工作台。若伴明显寒战、意识异常或憋气喘不上气，则提示立即就近急诊。'},
-    {q:'血常规白细胞低，明天还能不能按时化疗？', p:'王女士 · P-2031', a:'白细胞稍低一般没有问题，可以按计划来。', s:'需优化', key:'不得直接给出是否按期治疗结论；需提取原始报告并转团队复核。'},
-    {q:'有点恶心，但还能喝水吃饭，要怎么记录？', p:'李女士 · P-2048', a:'已记录恶心；请补充次数、能否进水进食及是否影响日常活动，团队将结合医嘱回复。', s:'回答良好', key:'症状采集完整，未越权给出处方或用药调整。'},
-    {q:'打完升白针后有点骨头酸，是正常的吗？', p:'赵女士 · P-2053', a:'请记录疼痛位置、程度及是否伴皮疹、呼吸不适等；具体处理请按医嘱并由团队确认。', s:'回答良好', key:'风险追问充分，明确人工复核边界。'}
+    {q:'我体温 38.8℃，需要等团队回复吗？', p:'陈女士 · 307-001', a:'先记录体温，建议继续观察。', s:'需优化', key:'应识别为红色风险；完成全部采集后提示及时挂号就诊，并推送团队工作台。若伴明显寒战、意识异常或憋气喘不上气，则提示立即就近急诊。'},
+    {q:'血常规白细胞低，明天还能不能按时化疗？', p:'王女士 · 307-002', a:'白细胞稍低一般没有问题，可以按计划来。', s:'需优化', key:'不得直接给出是否按期治疗结论；需提取原始报告并转团队复核。'},
+    {q:'有点恶心，但还能喝水吃饭，要怎么记录？', p:'李女士 · 307-003', a:'已记录恶心；请补充次数、能否进水进食及是否影响日常活动，团队将结合医嘱回复。', s:'回答良好', key:'症状采集完整，未越权给出处方或用药调整。'},
+    {q:'打完升白针后有点骨头酸，是正常的吗？', p:'赵女士 · 307-004', a:'请记录疼痛位置、程度及是否伴皮疹、呼吸不适等；具体处理请按医嘱并由团队确认。', s:'回答良好', key:'风险追问充分，明确人工复核边界。'}
   ];
   const RESEARCH = {
     exposure:{title:'治疗暴露', metric:'按计划完成周期', value:'91%', chart:'各周期治疗完成率', points:[96,94,91,88], labels:['C1','C2','C3','C4'], fields:['方案与治疗意图','计划/实际给药日期与剂量','延迟、减量、停治原因','相对剂量强度（RDI）','长效升白针使用情况']},
@@ -53,6 +53,9 @@
   };
   let view = 'home';
   let queueFilter = '全部';
+  let tagFilter = '';
+  const selectedExportPatients = new Set();
+  const PM=window.Patient307Management, CTCAE=window.CTCAE307;
   let qualityReviewed = false;
   let researchKey = 'exposure';
   let selectedPatient = '';
@@ -63,8 +66,10 @@
   const TEAM_KEY='cx-white-nurse307-team-v1';
   const doctors=[{id:'lead',name:'张医生',title:'主任医师'},{id:'zhou',name:'周医生',title:'副主任医师'},{id:'li',name:'李医生',title:'主治医师'}];
   let teamState;try{teamState=JSON.parse((localStorage.getItem(TEAM_KEY)||'null').replace(/汤立晨主任|汤立晨|汤主任/g,'张医生'))}catch{}
-  const freshTeam=()=>({owners:{'P-2026':'lead','P-2031':'zhou','P-2048':'li','P-2053':'zhou'},messages:{},invites:[],audit:[]});
+  const freshTeam=()=>({owners:{'307-001':'lead','307-002':'zhou','307-003':'li','307-004':'zhou'},messages:{},invites:[],audit:[],patientMeta:{},adverseGrades:{}});
   teamState=teamState||freshTeam();
+  for(const [oldId,newId] of Object.entries({'P-2026':'307-001','P-2031':'307-002','P-2048':'307-003','P-2053':'307-004'}))for(const key of ['owners','messages','contacts','patientMeta','adverseGrades'])if(teamState[key]?.[oldId]!==undefined&&teamState[key][newId]===undefined){teamState[key][newId]=teamState[key][oldId];delete teamState[key][oldId]}
+  for(const [id,owner] of Object.entries(freshTeam().owners))teamState.owners[id]??=owner;
   let role='lead',ownerFilter='all',queueQuery='',recordTab='archive',recordMetric='WBC',chatOrigin='patientDetail';
   const lead=()=>role==='lead',doctor=id=>doctors.find(d=>d.id===id)||doctors[0];
   const scopedPatients=()=>DEMO_PATIENTS.filter(p=>lead()||teamState.owners[p.id]===role);
@@ -72,7 +77,7 @@
   const activePatient=()=>scopedPatients().find(p=>p.name===selectedPatient);
   const saveTeam=()=>localStorage.setItem(TEAM_KEY,JSON.stringify(teamState));
   const audit=text=>{teamState.audit.unshift({time:new Date().toLocaleString('zh-CN'),text,actor:doctor(role).name});saveTeam()};
-  const canViewOutpatient=()=>lead()||teamState.owners['P-2026']===role;
+  const canViewOutpatient=()=>lead()||teamState.owners['307-001']===role;
   const opAlerts=()=>{if(!canViewOutpatient())return [];try{return (JSON.parse(localStorage.getItem('cx-white-nurse307-outpatient-v1'))?.alerts||[]).filter(a=>a.state!=='closed')}catch{return []}};
   const opPending=()=>opAlerts().length;
   function outpatientSummary(){if(!canViewOutpatient())return '';const list=opAlerts(),urgent=list.filter(a=>a.level==='urgent').length;return `<section class="dx-op-summary"><div class="dx-section"><h2>院外预警</h2><button data-outpatient="doctor">查看全部 ›</button></div><div class="dx-op-counts"><button data-outpatient="doctor"><b class="urgent">${urgent}</b><span>立即关注</span></button><button data-outpatient="doctor"><b>${list.filter(a=>a.level==='high').length}</b><span>优先处理</span></button><button data-outpatient="doctor"><b>${list.filter(a=>a.level==='attention').length}</b><span>需关注</span></button></div>${list.length?`<button class="dx-task dx-patient-alert" data-outpatient="doctor"><i>陈</i><span><b>陈女士 · ${list.length} 条待处理预警</b><small>${urgent?'立即关注':list.some(a=>a.level==='high')?'优先处理':'需关注'}${list.some(a=>a.contactRequested&&a.state!=='contacted')?' · 患者请求联系':''}</small><small>${esc([...new Set(list.map(a=>a.title))].join(' / '))}</small></span><em>›</em></button>`:''}</section>`}
@@ -83,7 +88,7 @@
   function doctorQueue(){const all=scopedPatients().filter(p=>(ownerFilter==='all'||teamState.owners[p.id]===ownerFilter)&&(queueFilter==='全部'||queueFilter==='需关注'&&['R1','R2'].includes(p.level)||queueFilter==='已完成'&&p.level==='已完成'||queueFilter==='随访中'&&p.level!=='已完成'));const shown=all.filter(p=>(p.name+' '+p.id).toLowerCase().includes(queueQuery.toLowerCase()));ROOT.innerHTML=`<div class="wbv2">${header('患者队列',lead()?'整个团队 · 按主管医生筛选':'仅展示本人负责的患者')}<label class="wbv2-search">⌕<input id="dxSearch" placeholder="搜索患者姓名 / 编号" aria-label="搜索患者" value="${esc(queueQuery)}"></label>${lead()?`<div class="dx-filter">${[['all','整个团队'],...doctors.map(d=>[d.id,d.name])].map(([id,t])=>`<button data-owner="${id}" class="${ownerFilter===id?'active':''}">${t}</button>`).join('')}</div>`:''}<div class="wbv2-pills">${['全部','随访中','需关注','已完成'].map(t=>`<button data-filter="${t}" class="${queueFilter===t?'active':''}">${t}</button>`).join('')}</div><p class="dx-scope" id="dxResultCount">当前筛选 · ${shown.length} 位患者</p><div id="dxPatients">${all.map(p=>`<article class="dx-patient" data-patient-search="${esc(p.name+' '+p.id)}" ${shown.includes(p)?'':'hidden'}><div class="dx-patient-top"><span class="dx-mini-avatar">${p.name[0]}</span><div><button data-patient="${p.name}">${p.name}</button><small>${p.id} · ${p.chemo.cycle}</small></div><button class="dx-chat-pill" data-chat="${p.name}">发起聊天</button></div><p>${p.note}</p><div class="dx-owner">主管医生：${ownerName(p)} ${status(p.level)}</div><button class="dx-record-entry" data-record="${p.name}">${icon('file')}<span><b>患者病历</b><small>病历档案 · 检查报告 · 关键指标</small></span><em>›</em></button></article>`).join('')}</div><div id="dxEmpty" class="wbv2-empty" ${shown.length?'hidden':''}>当前范围内没有匹配患者</div></div>`}
   function teamView(){ROOT.innerHTML=`<div class="wbv2">${header('团队管理','张医生团队 · 演示')}<section class="dx-info"><h2>协作照护，各有所属</h2><p>1 位负责人 · 2 位团队医生<br>负责人查看全队列，团队医生查看本人患者。</p></section>${doctors.map(d=>`<article class="dx-member"><span class="dx-mini-avatar">${d.name[0]}</span><div><b>${d.name}</b><small>${d.title} · ${d.id==='lead'?'负责人':'团队医生'}</small></div><em>${DEMO_PATIENTS.filter(p=>teamState.owners[p.id]===d.id).length} 位</em></article>`).join('')}${teamState.invites.map(d=>`<article class="dx-member"><span class="dx-mini-avatar">邀</span><div><b>${esc(d.name)}</b><small>${esc(d.title)} · 邀请预览</small></div><em>未发送</em></article>`).join('')}<details class="dx-info"><summary>＋ 邀请医生加入</summary><form id="dxInvite"><label>医生姓名<input name="name" required maxlength="20" placeholder="输入医生姓名"></label><label>职称<select name="title"><option>副主任医师</option><option>主治医师</option><option>住院医师</option></select></label><button class="wbv2-wide">生成邀请预览（演示）</button></form></details><h2 class="wbv2-section-title">团队操作记录</h2><section class="dx-info">${teamState.audit.length?teamState.audit.map(a=>`<div class="dx-audit"><b>${esc(a.text)}</b><small>${esc(a.time)} · ${esc(a.actor)}</small></div>`).join(''):'<p>暂无团队操作记录</p>'}</section></div>`}
   function accountView(){ROOT.innerHTML=`<div class="wbv2">${header('我的账户')}<section class="dx-info"><span class="dx-mini-avatar">${doctor(role).name[0]}</span><h2>${doctor(role).name}</h2><p>${doctor(role).title} · 张医生团队</p><p>${lead()?'可查看全部患者，管理团队和患者归属。':'仅可查看、搜索和联系本人负责的患者。'}</p></section><section class="dx-info"><h2>切换演示身份</h2><p>以下是虚构角色体验，不是真实账号授权。</p>${doctors.map(d=>`<button class="dx-role ${role===d.id?'active':''}" data-role="${d.id}">${d.name}<small>${d.id==='lead'?'团队负责人':'团队医生'} ${role===d.id?'· 当前身份':''}</small></button>`).join('')}</section></div>`}
-  function recordsView(){const p=activePatient();ROOT.innerHTML=`<div class="wbv2">${header('患者病历',p.name+' · '+p.id,'queue')}<section class="dx-info"><h2>${p.name}</h2><p>${p.node} · 主管医生 ${ownerName(p)}</p><span class="dx-readonly">虚构资料 · 只读查看</span></section><div class="dx-record-tabs">${[['archive','病历档案'],['reports','检查报告'],['metrics','关键指标']].map(([id,t])=>`<button data-record-tab="${id}" class="${recordTab===id?'active':''}">${t}</button>`).join('')}</div>${recordTab==='archive'?`<section class="dx-info"><h2>病情与治疗</h2>${[['疾病','乳腺癌（演示）'],['治疗方案','ddEC · '+p.chemo.cycle],['实际给药日期',p.chemo.date],['升白针记录',p.gcsf.used],['分子分型','待补充'],['TNM 分期','待补充'],['ER / PR / HER2','待补充'],['Ki-67','待补充'],['BRCA1/2','待补充']].map(([k,v])=>`<div class="dx-data-row"><span>${k}</span><b>${v}</b></div>`).join('')}</section>`:recordTab==='reports'?`<section class="dx-info"><h2>血常规报告</h2><p>${p.report.date} · ${p.report.source}</p>${p.report.values.length?`<div class="dx-data-row"><span>指标</span><b>记录值 / 状态</b></div>${p.report.values.map(x=>`<div class="dx-data-row"><span>${x[0]}</span><b>${x[1]}<small>${x[2]}</small></b></div>`).join('')}<p>演示数据，无真实原件附件。</p>`:'<div class="wbv2-empty">尚未上传检查报告</div>'}</section>`:`<section class="dx-info"><h2>关键指标</h2><div class="dx-filter">${['WBC','ANC','HGB','PLT'].map(k=>`<button data-metric="${k}" class="${recordMetric===k?'active':''}">${k}</button>`).join('')}</div><div class="dx-metric"><small>${recordMetric} · 最近记录</small><b>${p.report.values.find(x=>x[0]===recordMetric)?.[1]||'暂无记录'}</b><p>${p.report.uploaded==='是'?p.report.date:'尚未上传'}</p></div><div class="dx-trend-empty">⌁<b>暂无连续趋势</b><small>当前${p.report.values.length?'仅有单次':'没有'}检验记录，待补充后展示趋势。</small></div><p>参考范围以原报告为准，由团队核对异常。</p></section>`}<button class="wbv2-wide" data-chat="${p.name}" data-origin="records">与患者沟通</button></div>`}
+  function recordsView(){const p=activePatient();ROOT.innerHTML=`<div class="wbv2">${header('患者病历',p.name+' · '+p.id,'queue')}<section class="dx-info"><h2>${p.name}</h2><p>${p.node} · 主管医生 ${ownerName(p)}</p><span class="dx-readonly">虚构病历只读 · 标识标签可编辑</span></section><div class="dx-record-tabs">${[['archive','病历档案'],['reports','检查报告'],['metrics','关键指标']].map(([id,t])=>`<button data-record-tab="${id}" class="${recordTab===id?'active':''}">${t}</button>`).join('')}</div>${recordTab==='archive'?`<section class="dx-info"><h2>病情与治疗</h2>${[['疾病','乳腺癌（演示）'],['治疗方案','ddEC · '+p.chemo.cycle],['实际给药日期',p.chemo.date],['升白针记录',p.gcsf.used],['分子分型','待补充'],['TNM 分期','待补充'],['ER / PR / HER2','待补充'],['Ki-67','待补充'],['BRCA1/2','待补充']].map(([k,v])=>`<div class="dx-data-row"><span>${k}</span><b>${v}</b></div>`).join('')}</section>`:recordTab==='reports'?`<section class="dx-info"><h2>血常规报告</h2><p>${p.report.date} · ${p.report.source}</p>${p.report.values.length?`<div class="dx-data-row"><span>指标</span><b>记录值 / 状态</b></div>${p.report.values.map(x=>`<div class="dx-data-row"><span>${x[0]}</span><b>${x[1]}<small>${x[2]}</small></b></div>`).join('')}<p>演示数据，无真实原件附件。</p>`:'<div class="wbv2-empty">尚未上传检查报告</div>'}</section>`:`<section class="dx-info"><h2>关键指标</h2><div class="dx-filter">${['WBC','ANC','HGB','PLT'].map(k=>`<button data-metric="${k}" class="${recordMetric===k?'active':''}">${k}</button>`).join('')}</div><div class="dx-metric"><small>${recordMetric} · 最近记录</small><b>${p.report.values.find(x=>x[0]===recordMetric)?.[1]||'暂无记录'}</b><p>${p.report.uploaded==='是'?p.report.date:'尚未上传'}</p></div><div class="dx-trend-empty">⌁<b>暂无连续趋势</b><small>当前${p.report.values.length?'仅有单次':'没有'}检验记录，待补充后展示趋势。</small></div><p>参考范围以原报告为准，由团队核对异常。</p></section>`}<button class="wbv2-wide" data-chat="${p.name}" data-origin="records">与患者沟通</button></div>`}
   function chatView(){const p=activePatient();ROOT.innerHTML=`<div class="wbv2">${header('与'+p.name+'沟通',p.id+' · 主管医生 '+ownerName(p),chatOrigin)}<p class="dx-scope">发送身份：${doctor(role).name} · 仅本地演示</p><div class="dx-chat-history"><div class="dx-bubble"><small>${p.name} · 虚构消息</small>医生您好，我想了解接下来的复查安排。</div>${(teamState.messages[p.id]||[]).map(m=>`<div class="dx-bubble sent"><small>${esc(m.author)} · ${esc(m.time)}</small>${esc(m.text)}</div>`).join('')}</div><form id="dxChat"><label>回复内容<textarea name="message" aria-label="回复内容" maxlength="1000" required placeholder="输入回复，仅保存到演示会话"></textarea></label><button class="wbv2-wide">保存演示回复</button></form><p class="wbv2-foot">不会向真实患者发送消息。</p></div>`}
   function doctorBind(){ROOT.querySelectorAll('[data-owner]').forEach(b=>b.onclick=()=>{ownerFilter=b.dataset.owner;queueQuery='';view='queue';render()});ROOT.querySelectorAll('[data-role]').forEach(b=>b.onclick=()=>{role=b.dataset.role;ownerFilter='all';queueFilter='全部';queueQuery='';selectedPatient='';selectedRecipients.clear();view='home';render();ROOT.scrollTo(0,0)});ROOT.querySelectorAll('[data-record]').forEach(b=>b.onclick=()=>{selectedPatient=b.dataset.record;recordTab='archive';view='records';render();ROOT.scrollTo(0,0)});ROOT.querySelectorAll('[data-record-tab]').forEach(b=>b.onclick=()=>{recordTab=b.dataset.recordTab;render()});ROOT.querySelectorAll('[data-metric]').forEach(b=>b.onclick=()=>{recordMetric=b.dataset.metric;render()});ROOT.querySelectorAll('[data-chat]').forEach(b=>b.onclick=()=>{selectedPatient=b.dataset.chat;chatOrigin=b.dataset.origin||'patientDetail';view='chat';render();ROOT.scrollTo(0,0)});
  const search=ROOT.querySelector('#dxSearch');if(search)search.oninput=()=>{queueQuery=search.value;let count=0;ROOT.querySelectorAll('[data-patient-search]').forEach(el=>{el.hidden=!el.dataset.patientSearch.toLowerCase().includes(queueQuery.trim().toLowerCase());if(!el.hidden)count++});ROOT.querySelector('#dxEmpty').hidden=!!count;ROOT.querySelector('#dxResultCount').textContent=`当前筛选 · ${count} 位患者`};
@@ -92,6 +97,59 @@
  const chat=ROOT.querySelector('#dxChat');if(chat)chat.onsubmit=e=>{e.preventDefault();const p=activePatient(),text=new FormData(chat).get('message').trim();if(!p||!text)return;(teamState.messages[p.id]||=[]).push({author:doctor(role).name,time:new Date().toLocaleString('zh-CN'),text});saveTeam();render();notice('回复已保存到演示会话')};
  }
 
+  const patientMeta=p=>PM.metadata(p,teamState.patientMeta);
+  function queueBase(){return scopedPatients().filter(p=>(ownerFilter==='all'||teamState.owners[p.id]===ownerFilter)&&(queueFilter==='全部'||queueFilter==='需关注'&&['R1','R2'].includes(p.level)||queueFilter==='已完成'&&p.level==='已完成'||queueFilter==='随访中'&&p.level!=='已完成'))}
+  function enhanceQueue(){
+    const container=ROOT.querySelector('#dxPatients');if(!container)return;
+    const base=queueBase(),tags=[...new Set(base.flatMap(p=>patientMeta(p).tags))].sort((a,b)=>a.localeCompare(b,'zh-CN'));
+    if(tagFilter&&!tags.includes(tagFilter))tagFilter='';
+    container.insertAdjacentHTML('beforebegin',`<section class="dx-queue-tools"><b>按标签筛选</b><div class="dx-tag-filters"><button type="button" data-tag-filter="" class="${tagFilter?'':'active'}">全部标签</button>${tags.map(tag=>`<button type="button" data-tag-filter="${esc(tag)}" class="${tagFilter===tag?'active':''}">${esc(tag)}</button>`).join('')}</div><div class="dx-export-actions"><button type="button" data-select-visible>勾选筛选结果</button><button type="button" data-clear-selected>清空</button><button type="button" data-export-patients class="primary">导出已选患者 Excel</button></div><small id="dxSelectedCount">已选 0 位</small></section>`);
+    container.querySelectorAll('.dx-patient').forEach(card=>{
+      const name=card.querySelector('[data-patient]')?.dataset.patient,p=base.find(item=>item.name===name);if(!p)return;
+      const meta=patientMeta(p);card.dataset.patientId=p.id;
+      card.querySelector('.dx-patient-top')?.insertAdjacentHTML('afterbegin',`<label class="dx-patient-pick"><input type="checkbox" data-export-select="${p.id}" aria-label="选择${esc(p.name)}，ID ${p.id}" ${selectedExportPatients.has(p.id)?'checked':''}></label>`);
+      card.querySelector('.dx-owner')?.insertAdjacentHTML('beforebegin',`<div class="dx-patient-meta"><span>唯一ID ${p.id}</span><span>${esc(meta.category||'未分类')}</span>${meta.marker?`<strong>${esc(meta.marker)}</strong>`:''}${meta.tags.map(tag=>`<em>${esc(tag)}</em>`).join('')}</div>`);
+    });
+    const apply=()=>{
+      const visible=new Set(base.filter(p=>PM.matches(p,patientMeta(p),queueQuery,tagFilter)).map(p=>p.id));
+      container.querySelectorAll('.dx-patient').forEach(card=>{card.hidden=!visible.has(card.dataset.patientId)});
+      for(const id of [...selectedExportPatients])if(!visible.has(id))selectedExportPatients.delete(id);
+      container.querySelectorAll('[data-export-select]').forEach(box=>{box.checked=selectedExportPatients.has(box.dataset.exportSelect)});
+      ROOT.querySelector('#dxResultCount').textContent=`当前筛选 · ${visible.size} 位患者`;
+      ROOT.querySelector('#dxEmpty').hidden=visible.size>0;
+      ROOT.querySelector('#dxSelectedCount').textContent=`已选 ${selectedExportPatients.size} 位 · 仅导出当前筛选范围`;
+      ROOT.querySelector('[data-export-patients]').disabled=selectedExportPatients.size===0;
+    };
+    ROOT.querySelectorAll('[data-tag-filter]').forEach(button=>button.onclick=()=>{tagFilter=button.dataset.tagFilter;ROOT.querySelectorAll('[data-tag-filter]').forEach(item=>item.classList.toggle('active',item===button));apply()});
+    ROOT.querySelector('#dxSearch').oninput=event=>{queueQuery=event.target.value;apply()};
+    ROOT.querySelectorAll('[data-export-select]').forEach(box=>box.onchange=()=>{box.checked?selectedExportPatients.add(box.dataset.exportSelect):selectedExportPatients.delete(box.dataset.exportSelect);apply()});
+    ROOT.querySelector('[data-select-visible]').onclick=()=>{base.filter(p=>PM.matches(p,patientMeta(p),queueQuery,tagFilter)).forEach(p=>selectedExportPatients.add(p.id));apply()};
+    ROOT.querySelector('[data-clear-selected]').onclick=()=>{selectedExportPatients.clear();apply()};
+    ROOT.querySelector('[data-export-patients]').onclick=()=>{
+      const patients=base.filter(p=>selectedExportPatients.has(p.id)&&PM.matches(p,patientMeta(p),queueQuery,tagFilter));if(!patients.length)return;
+      const date=new Date().toLocaleDateString('sv-SE'),rows=PM.exportRows(patients,patientMeta,ownerName,date);
+      const blob=window.Research307Export.tableWorkbook(PM.headers,rows),url=URL.createObjectURL(blob),link=document.createElement('a');
+      link.href=url;link.download=`307项目-患者基础信息-${date}.xlsx`;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+      notice(`已导出 ${patients.length} 位患者的基础信息（虚构演示）`);
+    };
+    apply();
+  }
+  function enhancePatient(){
+    const p=activePatient(),anchor=view==='records'?ROOT.querySelector('.dx-record-tabs'):ROOT.querySelector('.wbv2-patient-summary');if(!p||!anchor)return;
+    const meta=patientMeta(p);
+    const content=`<section class="dx-info dx-profile-meta"><div class="dx-profile-id"><span>患者唯一ID</span><strong>${p.id}</strong></div><div class="dx-profile-pills"><span>${esc(meta.category||'未分类')}</span>${meta.marker?`<strong>${esc(meta.marker)}</strong>`:''}${meta.tags.map(tag=>`<em>${esc(tag)}</em>`).join('')}</div><details><summary>编辑标识、标签与分类</summary><form id="dxPatientMeta"><label>标识<input name="marker" maxlength="24" value="${esc(meta.marker)}" placeholder="如：需优先联系"></label><label>分类<input name="category" maxlength="24" value="${esc(meta.category)}" placeholder="如：复查跟进"></label><label>标签（用逗号分隔）<input name="tags" value="${esc(meta.tags.join('、'))}" placeholder="如：血常规、报告待复核"></label><button class="wbv2-wide">保存患者标记</button></form></details></section>`;
+    anchor.insertAdjacentHTML(view==='records'?'beforebegin':'afterend',content);
+    ROOT.querySelector('#dxPatientMeta').onsubmit=event=>{event.preventDefault();const data=Object.fromEntries(new FormData(event.currentTarget));(teamState.patientMeta||={})[p.id]=PM.normalize(data);audit(`${p.name}（${p.id}）更新标识、分类与标签`);render();notice('患者标记已保存到本地演示')};
+  }
+  function enhanceAdverse(){
+    const p=activePatient(),anchor=ROOT.querySelector('.wbv2-adverse')?.closest('.wbv2-panel');if(!p||!anchor)return;
+    const records=teamState.adverseGrades?.[p.id]||[];
+    const feverText=p.adverse.find(item=>item[0]==='发热')?.[1]||'',temp=feverText.match(/(\d+(?:\.\d+)?)\s*℃/),suggested=temp?CTCAE.feverGrade(Number(temp[1]),0):null;
+    anchor.insertAdjacentHTML('afterend',`<section class="wbv2-panel dx-ctcae"><div class="wbv2-panel-head"><h2>不良反应评价</h2><span>CTCAE v6.0</span></div><p>依据实际症状和处置情况选择对应条款，由医生确认分级；患者原话不会自动定级。</p>${suggested!==null?`<p class="dx-ctcae-hint">本例体温 ${temp[1]}℃ 对应“发热” ${suggested} 级温度区间；仍须核对原始记录。预警优先级独立于 CTCAE 分级。</p>`:''}${records.length?`<div class="dx-ctcae-results">${records.map(item=>`<div><b>${esc(CTCAE.terms[item.term]?.name||item.term)} · ${item.grade} 级</b><small>${esc(item.description)}<br>${esc(item.evidence)} · ${esc(item.by)} · ${esc(item.time)}</small></div>`).join('')}</div>`:'<div class="dx-ctcae-empty">暂无医生确认的 CTCAE v6.0 分级</div>'}<details><summary>按 CTCAE v6.0 条款评价</summary><form id="dxCtcae"><label>不良事件<select name="term" required><option value="">请选择事件</option>${Object.entries(CTCAE.terms).map(([key,item])=>`<option value="${key}">${item.name}</option>`).join('')}</select></label><label>符合的分级条款<select name="criterion" required disabled><option value="">先选择不良事件</option></select></label><label>核对依据<input name="evidence" required maxlength="120" placeholder="记录症状、功能影响或处置情况"></label><button class="wbv2-wide">保存评价结果</button></form></details><a href="${CTCAE.source}" target="_blank" rel="noopener">查看 NCI CTCAE v6.0 原文 ↗</a></section>`);
+    const form=ROOT.querySelector('#dxCtcae'),term=form.elements.term,criterion=form.elements.criterion;
+    term.onchange=()=>{const item=CTCAE.terms[term.value];criterion.disabled=!item;criterion.innerHTML='<option value="">请选择符合的条款</option>'+(item?item.criteria.map((entry,index)=>`<option value="${index}">${entry[0]} 级 · ${esc(entry[1])}</option>`).join(''):'')};
+    form.onsubmit=event=>{event.preventDefault();const values=Object.fromEntries(new FormData(form)),result=CTCAE.criterion(values.term,values.criterion);if(!result)return;const list=(teamState.adverseGrades||={})[p.id]||[];const item={...result,evidence:values.evidence.trim(),by:doctor(role).name,time:new Date().toLocaleString('zh-CN')};const existing=list.findIndex(entry=>entry.term===item.term);if(existing>=0)list[existing]=item;else list.push(item);teamState.adverseGrades[p.id]=list;audit(`${p.name}（${p.id}）确认 ${CTCAE.terms[item.term].name} CTCAE v6.0 ${item.grade} 级`);render();notice('CTCAE v6.0 评价已保存')};
+  }
   const state = () => {
     try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; }
   };
@@ -206,6 +264,9 @@
     }
     ROOT.querySelector('.wbv2')?.insertAdjacentHTML('beforeend',doctorNav());
     bind();doctorBind();
+    if(view==='queue')enhanceQueue();
+    if(['patientDetail','records'].includes(view))enhancePatient();
+    if(view==='patientDetail')enhanceAdverse();
   }
   function bind() {
     ROOT.querySelectorAll('[data-go]').forEach(el => el.onclick = () => {
@@ -231,7 +292,7 @@
     };
   }
   OPEN.onclick = () => { view='home'; go('workbench'); render(); };
-  window.Doctor307={reset(){teamState=freshTeam();saveTeam();role='lead';ownerFilter='all';queueFilter='全部';queueQuery='';selectedRecipients.clear();selectedPatient='';view='home';qualityReviewed=false;render()}};
+  window.Doctor307={reset(){teamState=freshTeam();saveTeam();role='lead';ownerFilter='all';queueFilter='全部';tagFilter='';queueQuery='';selectedRecipients.clear();selectedExportPatients.clear();selectedPatient='';view='home';qualityReviewed=false;render()}};
   window.addEventListener('outpatient307-change',()=>{if(ROOT.classList.contains('active')&&['home','risk'].includes(view))render()});
   new MutationObserver(()=>{if(ROOT.classList.contains('active'))render()}).observe(ROOT,{attributes:true,attributeFilter:['class']});
   render();

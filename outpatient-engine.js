@@ -2,6 +2,7 @@
 (function(root){
 'use strict';
 const sum=a=>a.reduce((s,v)=>s+Number(v),0),mean=a=>sum(a)/a.length;
+const CTCAE=root.CTCAE307||(typeof require==='function'?require('./ctcae-v6.js'):null);
 const severity=v=>v===0?'无症状':v<4?'轻度':v<7?'中度':'重度';
 function dayAdd(d,n){const x=new Date(d+'T12:00:00Z');x.setUTCDate(x.getUTCDate()+n);return x.toISOString().slice(0,10)}
 function days(a,b){return Math.round((new Date(a+'T12:00:00Z')-new Date(b+'T12:00:00Z'))/86400000)}
@@ -46,7 +47,7 @@ function score(id,a){const error=validateScale(id,a);if(error)throw Error(error)
  }
  return {value,label,level,details,urgent,version:'307-2026.10-v2'};
 }
-function labGrade(key,v,lln){if(!numeric(v)||Number(v)<0)return null;v=Number(v);if(key==='wbc')return v<1?4:v<2?3:v<3?2:v<Number(lln)?1:0;if(key==='anc')return v<.5?4:v<1?3:v<1.5?2:v<Number(lln)?1:0;return null}
+function labGrade(key,v,lln){return CTCAE.labGrade(key,v,lln)}
 function labRisk(r){const hits=[];if(r.kind==='blood'){if(numeric(r.wbc)&&Number(r.wbc)<1.5)hits.push('白细胞 < 1.5 ×10⁹/L');if(numeric(r.anc)&&Number(r.anc)<1.0)hits.push('中性粒细胞绝对值 < 1.0 ×10⁹/L');}
  const attention=r.kind==='blood'?(numeric(r.wbc)&&Number(r.wbc)<Number(r.wbcLLN)||numeric(r.anc)&&Number(r.anc)<Number(r.ancLLN)):r.kind==='liver'?(Number(r.alt)>Number(r.altULN)||Number(r.ast)>Number(r.astULN)||Number(r.tbil)>Number(r.tbilULN)):r.ecg==='异常';
  return {level:hits.length?'urgent':attention?'attention':r.kind==='ecg'&&r.ecg==='待复核'?'attention':'normal',hits};}

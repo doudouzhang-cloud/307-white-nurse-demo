@@ -57,5 +57,18 @@ function workbook(state,score){
  const data=rows(state,score);
  return zip(packageParts.map(([path,contents])=>[path,path==='xl/worksheets/sheet1.xml'?filledTemplateSheet(contents,data):contents]));
 }
-const api={rows,workbook};root.Research307Export=api;if(typeof module!=='undefined')module.exports=api;
+function tableWorkbook(headers,data,title='患者基础信息'){
+ const template=Object.fromEntries(root.Research307TemplatePackage?.parts||[]);
+ if(!template['xl/styles.xml']||!template['xl/theme/theme1.xml'])throw new Error('Excel 样式未加载');
+ const records=[headers,...data],last=column(headers.length)+records.length;
+ const sheet='<?xml version="1.0" encoding="UTF-8" standalone="yes"?><worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><dimension ref="A1:'+last+'"/><sheetViews><sheetView workbookViewId="0"><pane ySplit="1" topLeftCell="A2" activePane="bottomLeft" state="frozen"/></sheetView></sheetViews><sheetFormatPr defaultRowHeight="20"/><cols><col min="1" max="'+headers.length+'" width="20" customWidth="1"/></cols><sheetData>'+records.map((row,ri)=>`<row r="${ri+1}"${ri===0?' ht="28" customHeight="1"':''}>${row.map((value,ci)=>{const ref=column(ci+1)+(ri+1),attr=`r="${ref}" s="${ri===0?24:21}"`;return typeof value==='number'&&Number.isFinite(value)?`<c ${attr}><v>${value}</v></c>`:`<c ${attr} t="inlineStr"><is><t>${xml(value??'')}</t></is></c>`}).join('')}</row>`).join('')+'</sheetData></worksheet>';
+ return zip([
+  ['[Content_Types].xml','<?xml version="1.0" encoding="UTF-8"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/><Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/><Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/><Override PartName="/xl/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/></Types>'],
+  ['_rels/.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>'],
+  ['xl/workbook.xml','<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="'+xml(title)+'" sheetId="1" r:id="rId1"/></sheets></workbook>'],
+  ['xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rId3" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/></Relationships>'],
+  ['xl/worksheets/sheet1.xml',sheet],['xl/styles.xml',template['xl/styles.xml']],['xl/theme/theme1.xml',template['xl/theme/theme1.xml']]
+ ]);
+}
+const api={rows,workbook,tableWorkbook};root.Research307Export=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);
