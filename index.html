@@ -161,7 +161,12 @@
   function escape(t){return String(t).replace(/[&<>"]/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[x]))}
   function completedToday(){return state.voiceDone||state.selfDone}
   function sourceLabel(){return state.completionSource||((state.voiceDone&&state.selfDone)?'混合完成':state.voiceDone?'AI 电话随访':state.selfDone?'自主填报':'尚未完成')}
-  function pendingCare(){const data=window.Outpatient307?.snapshot();return {data,tasks:data?data.tasks.filter(t=>(t.date<=data.now||t.doctorOrdered)&&!t.done):[]}}
+  function pendingCare(){
+    const data=window.Outpatient307?.snapshot();
+    const tasks=data?data.tasks.filter(t=>t.date<=data.now&&!t.done):[];
+    if(data&&!completedToday())tasks.push({id:'daily-health',date:data.now,type:'daily',label:'今日身体情况记录'});
+    return {data,tasks};
+  }
   function updateHome(){
     const ready=Boolean(state.onboarded&&state.mode),today=Object.keys(dayData).find(k=>dayData[k].kind==='today')||'D6',done=window.DayCompletion.complete(dayData[today],state),recorded=completedToday(),date=new Date();
     $('#homeToday').hidden=!ready;$('#homeWelcome').hidden=ready;$('#homeAudio').hidden=!ready||done;$('#homePendingActions').hidden=done||recorded;$('#homeCompletedActions').hidden=!done;
@@ -178,7 +183,7 @@
     if(ready&&count){
       $('#homeAlert').classList.add('active');$('#homeToday').classList.remove('is-done');
       $('#alertTitle').textContent=`还有 ${count} 项照护待办`;
-      $('#alertCopy').textContent=(recorded?'健康记录已完成；':'')+'复查、评估或护理事项仍待完成，点击查看';
+      $('#alertCopy').textContent=recorded?'健康记录已完成；复查、评估或护理事项仍待完成，点击查看':'身体记录、复查、评估或护理事项仍待完成，点击查看';
       if(done){$('#homeTaskTitle').textContent='健康记录已完成';$('#homeTaskCopy').textContent=`仍有 ${count} 项照护事项，请继续查看待办`;}
     }
     if(ready&&care.data){const dateParts=care.data.now.split('-');const treatmentDay=Math.max(1,Math.round((new Date(care.data.now+'T12:00:00')-new Date(care.data.config.start+'T12:00:00'))/86400000)+1);$('#homeCourseTitle').textContent=`ddEC 化疗第 ${treatmentDay} 天`;$('#homeMonth').textContent=Number(dateParts[1])+'月';$('#homeDate').textContent=Number(dateParts[2]);}
